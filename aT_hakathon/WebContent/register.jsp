@@ -16,12 +16,12 @@
 
 
         <!-- wrapper -->
-        <div id="wrapper" style="width: 600px;margin-left: 400px;height: 800px;">
+        <div id="wrapper" style="width: 600px;margin-left: 400px;height: 1000px;">
 
             <!-- content-->
             <div id="content">
             
-            <h1 style="text-align:center;">오늘의 체험</h1>
+            <a href="index.jsp"><img src="images/logo3.JPG;" style="margin-left:130px; width: 200px;margin-bottom: 10px;margin-top:20px;"></a>
             <h2 style="text-align:center;">회원가입</h2><hr>
 
 				
@@ -69,7 +69,7 @@
                 <div>
                     <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
                     <span class="box int_mobile">
-                        <input type="tel" id="mobile" name="tel" class="int" maxlength="16" placeholder="전화번호 입력">
+                        <input type="tel" id="mobile" name="tel" class="int" maxlength="16" placeholder="예) 010-xxxx-xxxx">
                     </span>
                     <span class="error_next_box"></span>    
                 </div>
@@ -87,9 +87,9 @@
 
 
                 <!-- JOIN BTN-->
-                <div class="btn_area">
-                    <button type="submit" id="btnJoin">
-                        <span>가입하기</span>
+                <div class="btn_area" >
+                    <button type="submit" id="btnJoin" style="background-color:#acc29e;">
+                        <span style="color:black;">가입하기</span>
                     </button>
                 </div>
 		</form>

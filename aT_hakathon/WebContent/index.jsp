@@ -52,7 +52,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav" style="float: left;">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#reservationModal_4" class="nav-link">리뷰 작성하기</a></li>
+              data-toggle="modal" data-target="#reservationModal_4" class="nav-link">정보수정</a></li>
             <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
               data-toggle="modal" data-target="#reservationModal_3" class="nav-link">마이페이지</a></li>
             <li class="nav-item"><a href="login.jsp" target="_blank" class="nav-link">로그인</a></li>
@@ -68,6 +68,8 @@
               <li class="nav-item"><a href="#section-menu" class="nav-link">체험 예약하기</a></li>
               <li class="nav-item"><a href="#section-about" class="nav-link">AI 추천</a></li>
               <li class="nav-item"><a href="#section-contact" class="nav-link">체험위치 찾기</a></li>
+              <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
+              data-toggle="modal" data-target="#reservationModal" class="nav-link">사업등록</a></li>
             </ul>
           </div>
         </div>
@@ -210,7 +212,7 @@
                           <div class="media menu-item">
                             <div class="media-body">
                               <h5 class="mt-0">날짜 및 시간</h5>
-                              <input type="datetime-local" name="datetime-local" style="height:40px; width:250px;"/>
+                              <input type="date" name="date" style="height:40px; width:250px;"/>
                             </div>
                           </div>
                         </li>
@@ -224,50 +226,50 @@
                         </li>
                       </ul>
                       <div style="float:right;">
-                        <button style="border-radius: 20px;background-color: #84a98c;height: 60px;width: 130px;margin-top: 25px;">
-                          검색하기</button>
+                        <button style="border-radius: 20px;background-color: #84a98c;height: 60px;width: 130px;
+                        color:#fff; margin-top: 25px;"> 검색하기</button>
                       </div>
                     </div>
                     <!-- 검색결과 -->
                     <div style="width: 1000px; height: 300px;"> 
                      
                       <table border="1" style="width: 800px;height: 300px; text-align:center;">
-                        <th style="text-align:center;">지역</th>
-                        <th style="text-align:center;">체험명</th>
-                        <th style="text-align:center;">체험날짜</th>
-                        <th style="text-align:center;">인원</th>
-                        <th style="text-align:center;"></th>
+                        <th style="text-align:center;color:black;">지역</th>
+                        <th style="text-align:center;color:black;">체험명</th>
+                        <th style="text-align:center;color:black;">체험날짜</th>
+                        <th style="text-align:center;color:black;">인원</th>
+                        <th style="text-align:center;color:black;">예약</th>
                         <tr>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>3</td>
-                          <td>4</td>
+                          <td style="color:black;">1</td>
+                          <td style="color:black;">2</td>
+                          <td style="color:black;">3</td>
+                          <td style="color:black;">4</td>
                           <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
-                            style="color:lawngreen;">예약하기</a></td>
+                            style="color:#84a98c;">예약하기</a></td>
                         </tr>
                         <tr>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>3</td>
-                          <td>4</td>
+                          <td style="color:black;">1</td>
+                          <td style="color:black;">2</td>
+                          <td style="color:black;">3</td>
+                          <td style="color:black;">4</td>
                           <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
-                            style="color:lawngreen;">예약하기</a></td>
+                            style="color:#84a98c;">예약하기</a></td>
                         </tr>
                         <tr>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>3</td>
-                          <td>4</td>
+                           <td style="color:black;">1</td>
+                          <td style="color:black;">2</td>
+                          <td style="color:black;">3</td>
+                          <td style="color:black;">4</td>
                           <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
-                            style="color:lawngreen;">예약하기</a></td>
+                            style="color:#84a98c;">예약하기</a></td>
                         </tr>
                         <tr>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>3</td>
-                          <td>4</td>
+                           <td style="color:black;">1</td>
+                          <td style="color:black;">2</td>
+                          <td style="color:black;">3</td>
+                          <td style="color:black;">4</td>
                           <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
-                            style="color:lawngreen;">예약하기</a></td>
+                            style="color:#84a98c;">예약하기</a></td>
                         </tr>
                       </table>
                     </div>
@@ -279,36 +281,41 @@
                 <div class="row">
                   <div>
                     <p style="text-align: center;margin-left: 180px;">상세 예약현황은 예약확인 페이지에서 확인할 수 있습니다.</p>
-                    <table border="1" style="width: 800px;height: 300px;margin-left: 180px; text-align:center;">
-                      <th style="text-align:center;">지역</th>
-                      <th style="text-align:center;">체험명</th>
-                      <th style="text-align:center;">날짜 및 시간</th>
-                      <th style="text-align:center;">인원</th>
-                      <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                      </tr>
-                    </table>
+                    <table border="1" style="width: 800px;height: 300px; text-align:center; margin-left: 200px;">
+                        <th style="text-align:center;color:black;">지역</th>
+                        <th style="text-align:center;color:black;">체험명</th>
+                        <th style="text-align:center;color:black;">체험날짜</th>
+                        <th style="text-align:center;color:black;">인원</th>
+                        <th style="text-align:center;color:black;">예약</th>
+                        <tr>
+                          <td style="color:black;">1</td>
+                          <td style="color:black;">2</td>
+                          <td style="color:black;">3</td>
+                          <td style="color:black;">4</td>
+                          <td style="color:#84a98c;">예약완료</td>
+                        </tr>
+                        <tr>
+                          <td style="color:black;">1</td>
+                          <td style="color:black;">2</td>
+                          <td style="color:black;">3</td>
+                          <td style="color:black;">4</td>
+                          <td style="color:#84a98c;">예약완료</td>
+                        </tr>
+                        <tr>
+                           <td style="color:black;">1</td>
+                          <td style="color:black;">2</td>
+                          <td style="color:black;">3</td>
+                          <td style="color:black;">4</td>
+                          <td style="color:#84a98c;">예약완료</td>
+                        </tr>
+                        <tr>
+                           <td style="color:black;">1</td>
+                          <td style="color:black;">2</td>
+                          <td style="color:black;">3</td>
+                          <td style="color:black;">4</td>
+                          <td style="color:#84a98c;">예약완료</td>
+                        </tr>
+                      </table>
                 </div>
               </div>
             </div>
@@ -381,9 +388,6 @@
           <div class="col-md mb-5 ftco-animate">
             <div id="map" style="position:relative; overflow:hidden; width:800px; height: 600px; margin-left: 150px;"></div>
           </div>
-          <button style="border-radius: 50px; background-color: #84a98c; height: 60px; width: 130px;">
-            <a href="https://free-template.co/" target="_blank" 
-            data-toggle="modal" data-target="#reservationModal_5" style="color:ivory;">기업정보확인</a></button>
         </div>
       </div>
     </section>
@@ -404,84 +408,88 @@
     
     
 <!-- 모달창 원본 및 수정본 -->
-    <!-- 원본 Modal -->
-    <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-4 bg-image" style="background-image: url(images/bg_3.jpg);"></div>
-              <div class="col-lg-8 p-5">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <small>CLOSE </small><span aria-hidden="true">&times;</span>
-                </button>
-                <h1 class="mb-4">Reserve A Table</h1>  
-                <form action="#" method="post">
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label for="m_fname">First Name</label>
-                      <input type="text" class="form-control" id="m_fname">
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label for="m_lname">Last Name</label>
-                      <input type="text" class="form-control" id="m_lname">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="m_email">Email</label>
-                      <input type="email" class="form-control" id="m_email">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label for="m_people">How Many People</label>
-                      <select name="" id="m_people" class="form-control">
-                        <option value="1">1 People</option>
-                        <option value="2">2 People</option>
-                        <option value="3">3 People</option>
-                        <option value="4+">4+ People</option>
-                      </select>
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label for="m_phone">Phone</label>
-                      <input type="text" class="form-control" id="m_phone">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label for="m_date">Date</label>
-                      <input type="text" class="form-control" id="m_date">
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label for="m_time">Time</label>
-                      <input type="text" class="form-control" id="m_time">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="m_message">Message</label>
-                      <textarea class="form-control" id="m_message" cols="30" rows="7"></textarea>
-                    </div>
-                  </div>
-                  
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Reserve Now">
-                    </div>
-                  </div>
-
-                </form>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- END Modal -->
+   <!-- 수정 Modal -> 사업등록 -->
+			    <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
+			      <div class="modal-dialog modal-lg" role="document">
+			        <div class="modal-content">
+			          <div class="modal-body">
+			            <div class="row">
+			              <div class="col-lg-8 p-5">
+			                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			                  <small>CLOSE </small><span aria-hidden="true">&times;</span>
+			                </button>
+			                <h1 class="mb-4" style="font-size:35px;">사업등록</h1>  
+			                <form action="#" method="post">
+			                  <table border="2px" float:left;" style="width: 720px;">
+				                <tr>
+				                    <th width="300" style="text-align: center; color:black;">아이디</th>
+				                    <th width="800" height="70">
+				                        <input type="text" style="margin-left:10px;">
+				                    </th>
+				                </tr>
+				                <tr>
+				                    <th width="300" style="text-align: center;color:black;">기업명</th>
+				                    <th width="800" height="50" ><input type="text" style="margin-left:10px;"></th>
+				                </tr>
+				                <tr>
+				                    <th width="300" style="text-align: center;color:black;">이름</th>
+				                    <th width="800" height="50" ><input type="text" style="margin-left:10px;"></th>
+				                </tr>
+				                <tr>
+				                    <th width="300" style="text-align: center;color:black;">기업소개</th>
+				                    <th width="800" height="150">
+				                    <input type="text" style="margin-left:10px; width: 600px;">
+				                    <p style="margin-left:10px; margin-top:30px;">기업에 대한 설명을 짧게 요약하여 등록합니다.</p>
+				                    </th>
+				                </tr>
+				                <tr>
+				                    <th width="300" style="text-align: center;color:black;">기업사진등록</th>
+				                    <th width="800" height="300">
+				                        <img src="https://e7.pngegg.com/pngimages/982/97/png-clipart-computer-icons-camera-iphone-graphy-camera-photography-camera-icon.png" alt="" style="height: 200px;width: 200px; margin-left:10px;">
+				                        <button style="margin-left:10px; margin-bottom: 30px; margin-top:30px; ">사진 등록</button><br>
+				                    </th>
+				                </tr>
+				                <tr>
+				                    <th width="300" style="text-align: center;color:black;">상품작물</th>
+				                    <th width="800" height="50" ><input type="text" style="margin-left:10px;"></th>
+				                </tr>
+				                <tr>
+				                    <th width="300" style="text-align: center;color:black;">체험명</th>
+				                    <th width="800" height="50" ><input type="text" style="margin-left:10px;"></th>
+				                </tr>
+				                <tr>
+				                    <th width="300" style="text-align: center;color:black;">체험정보</th>
+				                    <th width="800" height="150">
+				                        <input type="text" style="margin-left:10px; width: 600px;">
+				                        <p style="margin-left:10px; margin-top:30px;">체험정보에 대한 설명을 짧게 요약하여 등록합니다.</p>
+				                    </th>
+				                </tr>
+				                <tr>
+					                <th width="300" style="text-align: center;color:black;">수용가능인원</th>
+						                <th width="800" height="150">
+						                <input type="number" placeholder="--명" min="0" max="50" step="1" style="margin-left:10px;height:40px; width:90px;"/>
+					                </th>
+				                </tr>
+				                <tr>
+				                    <th width="300" style="text-align: center;color:black;">위치</th>
+				                    <th width="600" height="300">
+				                        <button style="margin-left:10px; margin-bottom: 30px;">우편번호 검색</button><br>
+				                        <input type="text" style="margin-left:10px; width:400px; height:50px;">
+				                        <input type="text" placeholder="상세주소를 입력해주세요" style="width:400px; height:50px; margin-top:30px; margin-left:10px;"><br>
+				                        <input type="checkbox" style="margin-left:10px; margin-top: 30px;"> 기본 위치로 저장
+				                    </th>
+				                </tr>
+				            </table>
+				            <br><button style="margin-left:300px;margin-bottom: 30px;background-color:#84a98c;color:#fff;width: 130px;height: 40px; border-radius:10px;">사업등록완료</button>
+			                </form>
+			              </div>
+			            </div>
+			            
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			    <!-- Modal END -->
 
     <!--수정 Modal1 -> 농촌예약 시 예약용도 -->
     <div class="modal fade" id="reservationModal_1" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
@@ -494,7 +502,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
-                <h1 class="mb-4">농촌체험 예약하기</h1>  
+                <h1 class="mb-4" style="font-size:35px;">농촌체험 예약하기</h1>  
                 <form action="#" method="post">
                   <div class="row">
                     <div class="col-md-6 form-group">
@@ -573,7 +581,7 @@
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
-                <h1 class="mb-4">농촌체험 검색결과</h1>  
+                <h1 class="mb-4" style="font-size:35px;">농촌체험 검색결과</h1>  
                 <div>
                   <table border="1" style="width: 450px;height: 300px; text-align:center;">
                     <th style="text-align:center;">지역</th>
@@ -631,17 +639,17 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
-                <h1 class="mb-4">마이페이지</h1>  
+                <h1 class="mb-4" style="font-size:35px;">마이페이지</h1>  
                 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" 
                 id="ftco-navbar" style="margin-top: 0px;padding-right: 10px;">
                   <div class="container">
                     <div class="collapse navbar-collapse" id="ftco-nav">
                       <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
                         <li class="nav-item ftco-animate">
-                          <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#" role="tab" aria-controls="pills-breakfast" aria-selected="true">정보수정</a>
+                          <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#" role="tab" aria-controls="pills-breakfast" aria-selected="true">사업등록</a>
                         </li>
                         <li class="nav-item ftco-animate">
-                          <a class="nav-link" id="pills-lunch-tab" data-toggle="pill" href="#" role="tab" aria-controls="pills-lunch" aria-selected="false">예약확인</a>
+                          <a class="nav-link" id="pills-lunch-tab" data-toggle="pill" href="#" role="tab" aria-controls="pills-lunch" aria-selected="false">예약관리</a>
                         </li>
                       </ul>
                     </div>
@@ -666,21 +674,17 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
-                <h1 class="mb-4">리뷰 작성하기</h1>  
+                <h1 class="mb-4" style="font-size:35px;">리뷰 작성하기</h1><hr>
                 <form action="#" method="post">
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <label for="m_fname">작성자</label>
-                      <input type="text" class="form-control" id="m_fname">
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label for="m_lname">체험명</label>
-                      <input type="text" class="form-control" id="m_lname">
+                      <label for="m_fname">제목</label>
+                      <input type="text" class="form-control" id="m_fname" style="width: 450px;">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group" style="height: 300px;">
-                      <label for="m_message">review</label>
+                      <label for="m_message">내용</label>
                       <textarea class="form-control" id="m_message" cols="30" rows="7" 
                       style="margin-top:0px; margin-bottom:0px; width:450px; height: 400px;"></textarea>
                     </div>
@@ -707,9 +711,9 @@
     <div class="modal fade" id="reservationModal_5" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-          <div class="modal-body" style="height: 800px;">
+          <div class="modal-body" style="height: 900px;">
             <div class="row">
-              <div style="width: 750px;height: 700px;padding-left: 50px;padding-top: 20px; text-align: center;">
+              <div style="width: 750px;height: 700px;padding-left: 0px;padding-top: 20px;text-align: center;">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
@@ -717,71 +721,67 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-md-12 text-center mb-5 ftco-animate">
-                        <h1 class="mb-4">나주 배농장</h1>  
+                        <h1 class="mb-4" >나주 배농장</h1>  
                         <p>최근 리뷰 50 / 최근 기업 댓글 50</p>
                       </div>
-                      
-                      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-                      <script>
-                      function display(){
-                        var con=document.getElementById("pills-lunch");
-                        if(con.style.display=='none'){
-                          con.style.display = 'block';
-                        }else{
-                          con.style.display = 'none';
-                        }
-                      }
-                      </script>
-
                       <div class="col-md-12 text-center">
                         <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
                           <li class="nav-item ftco-animate">
                             <a class="nav-link" id="pills-breakfast-tab" data-toggle="pill" href="javascript:display();" 
                             role="tab" aria-controls="pills-breakfast" aria-selected="true" style="
-                            background-color: #6e9c6e !important; color:#fff !important;">체험 인기순위</a>
+                            background-color: #6e9c6e !important; color:#fff !important;">기업안내</a>
                           </li>
                           <li class="nav-item ftco-animate">
                             <a class="nav-link" id="pills-lunch-tab" data-toggle="pill" href="javascript:display();" 
                             role="tab" aria-controls="pills-lunch" aria-selected="false" style="
-                            background-color: #6e9c6e !important; color:#fff !important;">체험검색</a>
+                            background-color: #6e9c6e !important; color:#fff !important;">체험예약</a>
                           </li>
                           <li class="nav-item ftco-animate">
-                            <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#pills-dinner" 
+                            <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#reservationModal_4" 
                             role="tab" aria-controls="pills-dinner" aria-selected="false" style="
-                            background-color: #6e9c6e !important; color:#fff !important;">예약확인</a>
+                            background-color: #6e9c6e !important; color:#fff !important;">체험리뷰</a>
                           </li>
                         </ul>
-            
-                        <div class="tab-content text-left">
-                          <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
-                            <div class="row">
-                              <!-- 기업정보 -->
-                              <div class="col-md-6 ftco-animate">
-                                <div class="media menu-item">
-                                  <div class="media-body">
-                                    <h5 class="mt-0">기업명</h5>
-                                    <p>나주 배농장</p>
+                        
+                        <!-- 기업정보 begin -> 위의 매뉴와 연결해서 에이젝스로 넘겨줄 부분 -->
+                        <div class="tab-content text-left" style="float:left;">
+                          <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab" style="float:left;">
+                            <div class="row" style="float:left;width: 800px;">
+                            <div style="background-image: url(images/1.jpg);width: 360px;height: 400px;margin-top: 40px;"></div> 
+                              <div class="col-md-6 ftco-animate" style="float:left; background-color:#eff6e0;">
+                                <div class="media menu-item" style="margin-top: 20px;margin-bottom: 10px;">
+                                  <div class="media-body" >
+                                    <h5 class="mt-0">기업명</h5><hr>
+                                    <p style="color:black;">나주 배농장</p>
                                   </div>
                                 </div>
             
-                                <div class="media menu-item">
+                                <div class="media menu-item" style="margin-bottom: 10px;">
                                   <div class="media-body">
-                                    <h5 class="mt-0">대표명</h5>
-                                    <p>정수범</p>
+                                    <h5 class="mt-0">대표명</h5><hr>
+                                    <p style="color:black;">정수범</p>
                                   </div>
                                 </div>
             
+                                <div class="media menu-item" style="margin-bottom: 10px;">
+                                  <div class="media-body">
+                                    <h5 class="mt-0">기업소개</h5><hr>
+                                    <p style="color:black;">가족이 운영하는 배농장입니다.</p>
+                                  </div>
+                                </div>
                                 <div class="media menu-item">
                                   <div class="media-body">
-                                    <h5 class="mt-0">기업소개</h5>
-                                    <p>나주에서 제일 높은 당도를 자랑하는 꿀배입니다. 많이 놀러오세요^^</p>
+                                    <h5 class="mt-0">상품작물</h5><hr>
+                                    <p style="color:black;">배</p>
                                   </div>
                                 </div>
                               </div>
                               </div>
                             </div>
                           </div>
-                          <!-- 체험 예약 -->
+                          <!-- 기업정보 end -->
+                          
+                          <!-- 체험 예약 begin -->
                           <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
                             <div class="row">
                               <div class="col-md-6 ftco-animate" style="padding-left:250px;">
@@ -789,32 +789,36 @@
                                   <div class="media menu-item">
                                     <img class="mr-3" src="images/4.jpg" class="img-fluid" alt="Free Template by Free-Template.co">
                                     <div class="media-body">
-                                      <h5 class="mt-0">배 수확 체험</h5>
+                                      <h5 class="mt-0">배 수확 체험</h5><hr>
                                       <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                                      <h6 class="text-primary menu-price" style="font-size: 15px;">체험 비용 5만원</h6>
+                                      <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 10명</h6>
+                                      <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 나주시 봉황면</h6>
                                     </div>
                                   </div>
               
                                   <div class="media menu-item">
                                     <img class="mr-3" src="images/5.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                                     <div class="media-body">
-                                      <h5 class="mt-0">배즙 만들기 체험</h5>
+                                      <h5 class="mt-0">배즙 만들기 체험</h5><hr>
                                       <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                                      <h6 class="text-primary menu-price" style="font-size: 15px;">체험 비용 5만원</h6>
+                                      <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 10명</h6>
+                                      <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 나주시 봉황면</h6>
                                     </div>
                                   </div>
                             </div>
                           </div>
-                          <!-- 리뷰 -->
+                          <!-- 체험예약 end -->
+                          
+                          <!-- 리뷰  begin-->
                           <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
                             <div class="row">
                               <div>
                                 <p style="text-align: center;margin-left: 180px;">상세 예약현황은 예약확인 페이지에서 확인할 수 있습니다.</p>
                                 <table border="1" style="width: 800px;height: 300px;margin-left: 180px; text-align:center;">
-                                  <th style="text-align:center;">번호</th>
-                                  <th style="text-align:center;">체험명</th>
-                                  <th style="text-align:center;">리뷰</th>
-                                  <th style="text-align:center;">작성자</th>
+                                  <th style="text-align:center;">리뷰번호</th>
+                                  <th style="text-align:center;">기업명</th>
+                                  <th style="text-align:center;">리뷰제목</th>
+                                  <th style="text-align:center;">닉네임</th>
                                   <tr>
                                     <td>1</td>
                                     <td>2</td>
@@ -848,187 +852,10 @@
                     </div>
                   </div>
                 </section>
-                <!-- 체험 예약하기 END -->
-    <!-- Modal5 END -->
-    
-    <!-- 수정 Modal6 -> 회원가입  -->
-    <div class="modal fade" id="reservationModal_6" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-8 p-5">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <small>CLOSE </small><span aria-hidden="true">&times;</span>
-                </button>
-                <h1 class="mb-4">Reserve A Table</h1>  
-                <!-- ID -->
-                <div>
-                    <h3 class="join_title">
-                        <label for="id">아이디</label>
-                    </h3>
-                    <span class="box int_id">
-                        <input type="text" id="id" class="int" maxlength="20">
-                        <span class="step_url">@naver.com</span>
-                    </span>
-                    <span class="error_next_box"></span>
-                </div>
-                <!-- PW1 -->
-                <div>
-                    <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
-                    <span class="box int_pass">
-                        <input type="text" id="pswd1" class="int" maxlength="20">
-                        <span id="alertTxt">사용불가</span>
-                        <img src="m_icon_pass.png" id="pswd1_img1" class="pswdImg">
-                    </span>
-                    <span class="error_next_box"></span>
-                </div>
-                <!-- PW2 -->
-                <div>
-                    <h3 class="join_title"><label for="pswd2">비밀번호 재확인</label></h3>
-                    <span class="box int_pass_check">
-                        <input type="text" id="pswd2" class="int" maxlength="20">
-                        <img src="m_icon_check_disable.png" id="pswd2_img1" class="pswdImg">
-                    </span>
-                    <span class="error_next_box"></span>
-                </div>
-                <!-- NAME -->
-                <div>
-                    <h3 class="join_title"><label for="name">이름</label></h3>
-                    <span class="box int_name">
-                        <input type="text" id="name" class="int" maxlength="20">
-                    </span>
-                    <span class="error_next_box"></span>
-                </div>
-                <!-- BIRTH -->
-                <div>
-                    <h3 class="join_title"><label for="yy">생년월일</label></h3>
-                    <div id="bir_wrap">
-                        <!-- BIRTH_YY -->
-                        <div id="bir_yy">
-                            <span class="box">
-                                <input type="text" id="yy" class="int" maxlength="4" placeholder="년(4자)">
-                            </span>
-                        </div>
-                        <!-- BIRTH_MM -->
-                        <div id="bir_mm">
-                            <span class="box">
-                                <select id="mm" class="sel">
-                                    <option>월</option>
-                                    <option value="01">1</option>
-                                    <option value="02">2</option>
-                                    <option value="03">3</option>
-                                    <option value="04">4</option>
-                                    <option value="05">5</option>
-                                    <option value="06">6</option>
-                                    <option value="07">7</option>
-                                    <option value="08">8</option>
-                                    <option value="09">9</option>                                    
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                            </span>
-                        </div>
-                        <!-- BIRTH_DD -->
-                        <div id="bir_dd">
-                            <span class="box">
-                                <input type="text" id="dd" class="int" maxlength="2" placeholder="일">
-                            </span>
-                        </div>
-                    </div>
-                    <span class="error_next_box"></span>    
-                </div>
-                <!-- GENDER -->
-                <div>
-                    <h3 class="join_title"><label for="gender">성별</label></h3>
-                    <span class="box gender_code">
-                        <select id="gender" class="sel">
-                            <option>성별</option>
-                            <option value="M">남자</option>
-                            <option value="F">여자</option>
-                        </select>                            
-                    </span>
-                    <span class="error_next_box">필수 정보입니다.</span>
-                </div>
-                <!-- EMAIL -->
-                <div>
-                    <h3 class="join_title"><label for="email">본인확인 이메일<span class="optional">(선택)</span></label></h3>
-                    <span class="box int_email">
-                        <input type="text" id="email" class="int" maxlength="100" placeholder="선택입력">
-                    </span>
-                    <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>    
-                </div>
-                <!-- MOBILE -->
-                <div>
-                    <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
-                    <span class="box int_mobile">
-                        <input type="tel" id="mobile" class="int" maxlength="16" placeholder="전화번호 입력">
-                    </span>
-                    <span class="error_next_box"></span>    
-                </div>
-                <!-- JOIN BTN-->
-                <div class="btn_area">
-                    <button type="button" id="btnJoin">
-                        <span>가입하기</span>
-                    </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal6 END -->
-
-   <!-- 수정 Modal7 -> 로그인  -->
-    <div class="modal fade" id="reservationModal_7" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-8 p-5">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <small>CLOSE</small><span aria-hidden="true">&times;</span>
-                </button>
-                <h1 class="mb-4">로그인</h1>  
-                <form method="post" id="authForm" action="#">
-                <input type="hidden" name="redirectUrl" value="">
-                <fieldset>
-                  <legend class="screen_out">로그인 정보 입력폼</legend>
-                  <div class="box_login">
-                    <div class="inp_text">
-                      <label for="loginId" class="screen_out">아이디</label>
-                      <input type="email" id="loginId" name="loginId" placeholder="ID" >
-                    </div>
-                    <div class="inp_text">
-                      <label for="loginPw" class="screen_out">비밀번호</label>
-                      <input type="password" id="loginPw" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <button type="submit" class="btn_login"  disabled>로그인</button>
-                  <div class="login_append">
-                    <div class="inp_chk"> <!-- 체크시 checked 추가 -->
-                      <input type="checkbox" id="keepLogin" class="inp_radio"  name="keepLogin">
-                      <label for="keepLogin" class="lab_g">
-                     <span class="img_top ico_check"></span>
-                     <span class="txt_lab">로그인 상태 유지</span>
-                      </label>
-                    </div>
-                    <span class="txt_find">
-                       <a href="/member/find/loginId" class="link_find">아이디</a>
-                       <a href="/member/find/password" class="link_find">비밀번호 찾기</a>
-                    </span>
-                  </div>
-                </fieldset>
-              </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal7 END -->
+                <!-- 리뷰 END -->
+    			<!-- Modal5 END -->
+    			
+    			
    
 
     <!-- loader -->

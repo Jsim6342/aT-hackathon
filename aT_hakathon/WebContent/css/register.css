@@ -7,13 +7,12 @@ html {
 body {
     margin: 0;
     height: 100%;
-    background: #f5f6f7;
-    font-family: Dotum,'µ¸¿ò',Helvetica,sans-serif;
-    background: #76b852;
-    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-    background: -moz-linear-gradient(right, #76b852, #8DC26F);
-    background: -o-linear-gradient(right, #76b852, #8DC26F);
-    background: linear-gradient(to left, #76b852, #8DC26F);
+    background: #acc29e
+    background: #acc29e
+    background: -webkit-linear-gradient(right, #acc29e, #acc29e);
+    background: -moz-linear-gradient(right, #acc29e, #acc29e);
+    background: -o-linear-gradient(right, #acc29e, #acc29e);
+    background: linear-gradient(to left, #acc29e, #acc29e);
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -179,7 +178,7 @@ select {
     border: 0;
     cursor: pointer;
     color: #fff;
-    background-color: #08a600;
+    background-color: #acc29e;
     font-size: 20px;
     font-weight: 400;
     font-family: Dotum,'µ¸¿ò',Helvetica,sans-serif;
