@@ -41,18 +41,7 @@ public class MemberJoin extends HttpServlet {
 	         if(cnt > 0) {
 	        	 response.sendRedirect("login.html");
 	         }
-	         
-//	   		 db연결 확인 후  확인 후 지워도 된다.
-//	         if(conn!=null) {
-//	            System.out.println("연결성공");
-//	         }else {
-//	            System.out.println("연결실패");
-//	         }
-	
-		
-		
-		
-		//3. 저장완료 시 -> 로그인페이지로 이동하기
+
 		
 	}
 

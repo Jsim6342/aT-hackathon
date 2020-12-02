@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lnag="ko">
     <head>
         <meta charset="UTF-8">
-        <title>ȸ������</title>
+        <title>회원가입</title>
         <link rel="stylesheet" href="css/register.css">
         
     </head>
@@ -21,36 +21,34 @@
             <!-- content-->
             <div id="content">
             
-            <h1 style="text-align:center;">������ ü��</h1>
-            <h2 style="text-align:center;">ȸ������</h2><hr>
+            <h1 style="text-align:center;">오늘의 체험</h1>
+            <h2 style="text-align:center;">회원가입</h2><hr>
 
-				<!-- �����/ȸ�� -->
-				<form method="get" action="form-action.html">
-			      <p>�з�</p>
-			      <label><input type="radio" name="fruit" value="apple">�����</label>
-			      <label><input type="radio" name="fruit" value="banana" checked>ȸ��</label>
-			    
-			    </form>
 				
-
+				<form method="post" action="MemberJoin">
+				<!-- 사업자/회원 -->
+			      <p>분류</p>
+			      <label><input type="radio" name="classify" value="company">사업자</label>
+			      <label><input type="radio" name="classify" value="member" checked>회원</label>
+			    
 
                 <!-- ID -->
                 <div>
                     <h3 class="join_title">
-                        <label for="id">���̵�</label>
+                        <label for="id">아이디</label>
                     </h3>
                     <span class="box int_id">
-                        <input type="text" id="id" class="int" maxlength="20">
+                        <input type="text" id="id" name="id" class="int" maxlength="20">
                     </span>
                     <span class="error_next_box"></span>
                 </div>
 
                 <!-- PW1 -->
                 <div>
-                    <h3 class="join_title"><label for="pswd1">��й�ȣ</label></h3>
+                    <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
                     <span class="box int_pass">
-                        <input type="text" id="pswd1" class="int" maxlength="20">
-                        <span id="alertTxt">���Ұ�</span>
+                        <input type="password" id="pswd1" name="pw" class="int" maxlength="20">
+                        <span id="alertTxt">사용불가</span>
                        
                     </span>
                     <span class="error_next_box"></span>
@@ -59,9 +57,9 @@
 
                 <!-- NAME -->
                 <div>
-                    <h3 class="join_title"><label for="name">�̸�</label></h3>
+                    <h3 class="join_title"><label for="name">이름</label></h3>
                     <span class="box int_name">
-                        <input type="text" id="name" class="int" maxlength="20">
+                        <input type="text" id="name" name="name" class="int" maxlength="20">
                     </span>
                     <span class="error_next_box"></span>
                 </div>
@@ -69,9 +67,9 @@
                 
                 <!-- MOBILE -->
                 <div>
-                    <h3 class="join_title"><label for="phoneNo">�޴���ȭ</label></h3>
+                    <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
                     <span class="box int_mobile">
-                        <input type="tel" id="mobile" class="int" maxlength="16" placeholder="��ȭ��ȣ �Է�">
+                        <input type="tel" id="mobile" name="tel" class="int" maxlength="16" placeholder="전화번호 입력">
                     </span>
                     <span class="error_next_box"></span>    
                 </div>
@@ -79,10 +77,10 @@
           <!-- NICKNAME -->
                 <div>
                     <h3 class="join_title">
-                        <label for="nickname">�г���</label>
+                        <label for="nickname">닉네임</label>
                     </h3>
                     <span class="box int_nickname">
-                        <input type="text" id="nickname" class="int" maxlength="20">
+                        <input type="text" id="nickname" name="nickname" class="int" maxlength="20">
                     </span>
                     <span class="error_next_box"></span>
                 </div>
@@ -90,11 +88,11 @@
 
                 <!-- JOIN BTN-->
                 <div class="btn_area">
-                    <button type="button" id="btnJoin">
-                        <span>�����ϱ�</span>
+                    <button type="submit" id="btnJoin">
+                        <span>가입하기</span>
                     </button>
                 </div>
-
+		</form>
                 
 
             </div> 
@@ -103,5 +101,7 @@
         </div> 
         <!-- wrapper -->
     <script src="main.js"></script>
+    
+    
     </body>
 </html>
