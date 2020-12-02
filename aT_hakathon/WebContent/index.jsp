@@ -179,67 +179,101 @@
                   </div>
                 </div>
               </div>
+            
               <!-- 검색하기 -->
               <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
                 <div class="row">
-                  <div class="col-md-6 ftco-animate" style="padding-left:250px;">
-                    <div class="media menu-item">
-                      <div class="media-body">
-                        <h5 class="mt-0">지역검색</h5>
-                          <select name="location" id="location" style="height:40px; width:250px;">
-                          <option value="">지역을 선택해주세요.</option>
-                          <option value="">경기도</option>
-                          <option value="">강원도</option>
-                          <option value="">전라북도</option>
-                          <option value="">전라남도</option>
-                          <option value="">충청북도</option>
-                          <option value="">충청남도</option>
-                          <option value="">경상북도</option>
-                          <option value="">경상남도</option>
-                          <option value="">제주특별자치도</option>
-                        </select>
+                  <div class="col-md-6 ftco-animate" style="padding-left: 200px;">
+                     <!-- 체험 검색부분 -->
+                    <div style="width:800px;">
+                      <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
+                        <li class="nav-item ftco-animate">
+                          <div class="media menu-item">
+                            <div class="media-body">
+                              <h5 class="mt-0">지역검색</h5>
+                                <select name="location" id="location" style="height:40px; width:250px;">
+                                <option value="">지역을 선택해주세요.</option>
+                                <option value="">경기도</option>
+                                <option value="">강원도</option>
+                                <option value="">전라북도</option>
+                                <option value="">전라남도</option>
+                                <option value="">충청북도</option>
+                                <option value="">충청남도</option>
+                                <option value="">경상북도</option>
+                                <option value="">경상남도</option>
+                                <option value="">제주특별자치도</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item ftco-animate">
+                          <div class="media menu-item">
+                            <div class="media-body">
+                              <h5 class="mt-0">날짜 및 시간</h5>
+                              <input type="datetime-local" name="datetime-local" style="height:40px; width:250px;"/>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item ftco-animate">
+                          <div class="media menu-item">
+                            <div class="media-body">
+                              <h5 class="mt-0">인원</h5>
+                              <input type="number" placeholder="--명" min="0" max="50" step="1" style="height:40px; width:90px;"/>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div style="float:right;">
+                        <button style="border-radius: 20px;background-color: #84a98c;height: 60px;width: 130px;margin-top: 25px;">
+                          검색하기</button>
                       </div>
                     </div>
-
-                    <div class="media menu-item">
-                      <div class="media-body">
-                        <h5 class="mt-0">체험종류</h5>
-                        <select name="location" id="location" style="height:40px; width:250px;">
-                          <option value="">종류를 선택해주세요.</option>
-                          <option value="">농촌</option>
-                          <option value="">어촌</option>
-                          <option value="">산촌</option>
-                        </select>
-                      </div>
+                    <!-- 검색결과 -->
+                    <div style="width: 1000px; height: 300px;"> 
+                     
+                      <table border="1" style="width: 800px;height: 300px; text-align:center;">
+                        <th style="text-align:center;">지역</th>
+                        <th style="text-align:center;">체험명</th>
+                        <th style="text-align:center;">체험날짜</th>
+                        <th style="text-align:center;">인원</th>
+                        <th style="text-align:center;"></th>
+                        <tr>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>4</td>
+                          <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
+                            style="color:lawngreen;">예약하기</a></td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>4</td>
+                          <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
+                            style="color:lawngreen;">예약하기</a></td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>4</td>
+                          <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
+                            style="color:lawngreen;">예약하기</a></td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>4</td>
+                          <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
+                            style="color:lawngreen;">예약하기</a></td>
+                        </tr>
+                      </table>
                     </div>
-
-                  </div>
-                  <div class="col-md-6 ftco-animate" style="padding-left:100px;">
-                    <div class="media menu-item">
-                      <div class="media-body">
-                        <h5 class="mt-0">날짜 및 시간</h5>
-                        <input type="datetime-local" name="datetime-local" style="height:40px; width:250px;"/>
-                      </div>
-                    </div>
-                    <div class="media menu-item">
-                      <div class="media-body">
-                        <h5 class="mt-0">인원</h5>
-                        <input type="number" placeholder="--명" min="0" max="50" step="1" style="height:40px; width:90px;"/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="media menu-item" style="margin-left: 440px;margin-top: 50px;">
-                    <div class="media-body">
-                      <button style="margin-right:50px; border-radius: 50px; background-color: #84a98c; height: 60px; width: 130px;">
-                        <a href="https://free-template.co/" target="_blank" 
-                        data-toggle="modal" data-target="#reservationModal_2" style="color:ivory;">검색하기</a>
-                      <button style="border-radius: 50px; background-color: #84a98c; height: 60px; width: 130px;">
-                        <a href="https://free-template.co/" target="_blank" 
-                        data-toggle="modal" data-target="#reservationModal_1" style="color:ivory;">예약하기</a></button>
-                    </div>
-                  </div>
                 </div>
               </div>
+            </div>
               <!-- 예약확인 -->
               <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
                 <div class="row">
@@ -278,11 +312,11 @@
                 </div>
               </div>
             </div>
-
           </div>
-        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
     <!-- 체험 예약하기 END -->
 
     <!-- AI 추천 부분 begin  -->
