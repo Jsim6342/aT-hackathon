@@ -55,8 +55,8 @@
               data-toggle="modal" data-target="#reservationModal_4" class="nav-link">리뷰 작성하기</a></li>
             <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
               data-toggle="modal" data-target="#reservationModal_3" class="nav-link">마이페이지</a></li>
-            <li class="nav-item"><a href="login.jsp">로그인</a></li>
-            <li class="nav-item"><a href="register.jsp">회원가입</a></li>
+            <li class="nav-item"><a href="login.jsp" target="_blank" class="nav-link">로그인</a></li>
+            <li class="nav-item"><a href="register.jsp" target="_blank" class="nav-link">회원가입</a></li>
           </ul>
         </div>
       </div>
