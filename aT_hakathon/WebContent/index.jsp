@@ -26,8 +26,6 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
-
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 <title>Insert title here</title>
@@ -106,7 +104,7 @@
 
           <div class="col-md-12 text-center">
 
-            <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
+            <ul class="nav ftco-tab-nav nav-pills mb-5" idw="pills-tab" role="tablist">
               <li class="nav-item ftco-animate">
                 <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#pills-breakfast" role="tab" aria-controls="pills-breakfast" aria-selected="true">체험 인기순위</a>
               </li>
@@ -244,32 +242,28 @@
                           <td style="color:black;">2</td>
                           <td style="color:black;">3</td>
                           <td style="color:black;">4</td>
-                          <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
-                            style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
                         </tr>
                         <tr>
                           <td style="color:black;">1</td>
                           <td style="color:black;">2</td>
                           <td style="color:black;">3</td>
                           <td style="color:black;">4</td>
-                          <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
-                            style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
                         </tr>
                         <tr>
                            <td style="color:black;">1</td>
                           <td style="color:black;">2</td>
                           <td style="color:black;">3</td>
                           <td style="color:black;">4</td>
-                          <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
-                            style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
                         </tr>
                         <tr>
                            <td style="color:black;">1</td>
                           <td style="color:black;">2</td>
                           <td style="color:black;">3</td>
                           <td style="color:black;">4</td>
-                          <td><a href="https://free-template.co/" target="_blank" data-toggle="modal" data-target="#reservationModal_5" 
-                            style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
                         </tr>
                       </table>
                     </div>
@@ -707,157 +701,7 @@
     </div>
     <!-- Modal4 END -->
 
-    <!-- 수정 Modal5 -> 기업 세부페이지 -->
-    <div class="modal fade" id="reservationModal_5" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-body" style="height: 900px;">
-            <div class="row">
-              <div style="width: 750px;height: 700px;padding-left: 0px;padding-top: 20px;text-align: center;">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <small>CLOSE </small><span aria-hidden="true">&times;</span>
-                </button>
-                <section class="ftco-section" id="section-menu" style="padding-top: 0px;">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12 text-center mb-5 ftco-animate">
-                        <h1 class="mb-4" >나주 배농장</h1>  
-                        <p>최근 리뷰 50 / 최근 기업 댓글 50</p>
-                      </div>
-                      <div class="col-md-12 text-center">
-                        <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
-                          <li class="nav-item ftco-animate">
-                            <a class="nav-link" id="pills-breakfast-tab" data-toggle="pill" href="javascript:display();" 
-                            role="tab" aria-controls="pills-breakfast" aria-selected="true" style="
-                            background-color: #6e9c6e !important; color:#fff !important;">기업안내</a>
-                          </li>
-                          <li class="nav-item ftco-animate">
-                            <a class="nav-link" id="pills-lunch-tab" data-toggle="pill" href="javascript:display();" 
-                            role="tab" aria-controls="pills-lunch" aria-selected="false" style="
-                            background-color: #6e9c6e !important; color:#fff !important;">체험예약</a>
-                          </li>
-                          <li class="nav-item ftco-animate">
-                            <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#reservationModal_4" 
-                            role="tab" aria-controls="pills-dinner" aria-selected="false" style="
-                            background-color: #6e9c6e !important; color:#fff !important;">체험리뷰</a>
-                          </li>
-                        </ul>
-                        
-                        <!-- 기업정보 begin -> 위의 매뉴와 연결해서 에이젝스로 넘겨줄 부분 -->
-                        <div class="tab-content text-left" style="float:left;">
-                          <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab" style="float:left;">
-                            <div class="row" style="float:left;width: 800px;">
-                            <div style="background-image: url(images/1.jpg);width: 360px;height: 400px;margin-top: 40px;"></div> 
-                              <div class="col-md-6 ftco-animate" style="float:left; background-color:#eff6e0;">
-                                <div class="media menu-item" style="margin-top: 20px;margin-bottom: 10px;">
-                                  <div class="media-body" >
-                                    <h5 class="mt-0">기업명</h5><hr>
-                                    <p style="color:black;">나주 배농장</p>
-                                  </div>
-                                </div>
-            
-                                <div class="media menu-item" style="margin-bottom: 10px;">
-                                  <div class="media-body">
-                                    <h5 class="mt-0">대표명</h5><hr>
-                                    <p style="color:black;">정수범</p>
-                                  </div>
-                                </div>
-            
-                                <div class="media menu-item" style="margin-bottom: 10px;">
-                                  <div class="media-body">
-                                    <h5 class="mt-0">기업소개</h5><hr>
-                                    <p style="color:black;">가족이 운영하는 배농장입니다.</p>
-                                  </div>
-                                </div>
-                                <div class="media menu-item">
-                                  <div class="media-body">
-                                    <h5 class="mt-0">상품작물</h5><hr>
-                                    <p style="color:black;">배</p>
-                                  </div>
-                                </div>
-                              </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- 기업정보 end -->
-                          
-                          <!-- 체험 예약 begin -->
-                          <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
-                            <div class="row">
-                              <div class="col-md-6 ftco-animate" style="padding-left:250px;">
-                                <div class="col-md-6 ftco-animate">
-                                  <div class="media menu-item">
-                                    <img class="mr-3" src="images/4.jpg" class="img-fluid" alt="Free Template by Free-Template.co">
-                                    <div class="media-body">
-                                      <h5 class="mt-0">배 수확 체험</h5><hr>
-                                      <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                                      <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 10명</h6>
-                                      <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 나주시 봉황면</h6>
-                                    </div>
-                                  </div>
-              
-                                  <div class="media menu-item">
-                                    <img class="mr-3" src="images/5.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
-                                    <div class="media-body">
-                                      <h5 class="mt-0">배즙 만들기 체험</h5><hr>
-                                      <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                                      <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 10명</h6>
-                                      <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 나주시 봉황면</h6>
-                                    </div>
-                                  </div>
-                            </div>
-                          </div>
-                          <!-- 체험예약 end -->
-                          
-                          <!-- 리뷰  begin-->
-                          <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
-                            <div class="row">
-                              <div>
-                                <p style="text-align: center;margin-left: 180px;">상세 예약현황은 예약확인 페이지에서 확인할 수 있습니다.</p>
-                                <table border="1" style="width: 800px;height: 300px;margin-left: 180px; text-align:center;">
-                                  <th style="text-align:center;">리뷰번호</th>
-                                  <th style="text-align:center;">기업명</th>
-                                  <th style="text-align:center;">리뷰제목</th>
-                                  <th style="text-align:center;">닉네임</th>
-                                  <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                  </tr>
-                                  <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                  </tr>
-                                  <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                  </tr>
-                                  <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                  </tr>
-                                </table>
-                            </div>
-                          </div>
-                        </div>
-            
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <!-- 리뷰 END -->
-    			<!-- Modal5 END -->
-    			
-    			
-   
-
+    
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
