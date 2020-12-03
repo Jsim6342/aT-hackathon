@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.DAO.MemberDAO;
 
+
+
 @WebServlet("/MemberJoin")
 public class MemberJoin extends HttpServlet {
 
@@ -36,10 +38,10 @@ public class MemberJoin extends HttpServlet {
 		
 		//2. DB(Oracle) -> Table 사용자가 입력한 값을 저장하기
 		MemberDAO dao = new MemberDAO();
-		int cnt = dao.member_join(id, pw, classify, name, tel, nickname);
+		int cnt = dao.memberJoin(id, pw, classify, name, tel, nickname);
 	 
 	         if(cnt > 0) {
-	        	 response.sendRedirect("login.html");
+	        	 response.sendRedirect("login.jsp");
 	         }
 
 		

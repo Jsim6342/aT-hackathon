@@ -1,5 +1,7 @@
 package com.DAO;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,7 +17,7 @@ public class MemberDAO {
 	Connect dao = new Connect();
 
 	//회원가입기능
-	public int member_join(String id, String pw, String classify, String name, String tel, String nickname) {
+	public int memberJoin(String id, String pw, String classify, String name, String tel, String nickname) {
 
 		try {
 
