@@ -187,7 +187,7 @@
                      <!-- 체험 검색부분 -->
                     <div style="width:800px;">
                       <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
-                        <li class="nav-item ftco-animate">
+                        <li class="nav-item ftco-animate">a
                           <div class="media menu-item">
                             <div class="media-body">
                               <h5 class="mt-0">지역검색</h5>
@@ -237,32 +237,44 @@
                         <th style="text-align:center;color:black;">체험날짜</th>
                         <th style="text-align:center;color:black;">인원</th>
                         <th style="text-align:center;color:black;">예약</th>
+                        <!-- 남쪽창고농수산물협동조합 -->
                         <tr>
-                          <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
-                          <td style="color:black;">4</td>
+                          <td style="color:black;">전남 해남군</td>
+                          <td style="color:black;">김장체험, 쑥캐기체험</td>
+                          <td style="color:black;">2020-12-11</td>
+                          <td style="color:black;">20</td>
                           <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
                         </tr>
+                        <!-- 장성편백산마늘영농조합법인 -->
                         <tr>
-                          <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
-                          <td style="color:black;">4</td>
+                          <td style="color:black;">전남 장성군</td>
+                          <td style="color:black;">마늘,버섯 체험, 교육</td>
+                          <td style="color:black;">2020-12-11</td>
+                          <td style="color:black;">10</td>
                           <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
                         </tr>
+                        <!-- 고추마을영농조합법인 -->
                         <tr>
-                           <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
-                          <td style="color:black;">4</td>
+                           <td style="color:black;">전남 영광군</td>
+                          <td style="color:black;">고추장담그기, 떡볶이 만들기</td>
+                          <td style="color:black;">2020-12-11</td>
+                          <td style="color:black;">18</td>
                           <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
                         </tr>
+                        <!-- 황토랑양파즙 영농조합법인 -->
                         <tr>
-                           <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
-                          <td style="color:black;">4</td>
+                           <td style="color:black;">전남 무안군</td>
+                          <td style="color:black;">양파즙 제조, 견학</td>
+                          <td style="color:black;">2020-12-11</td>
+                          <td style="color:black;">15</td>
+                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
+                        </tr>
+                        <!-- 파도목장 -->
+                        <tr>
+                           <td style="color:black;">전남 무안군</td>
+                          <td style="color:black;">낙농체험, 직거래</td>
+                          <td style="color:black;">2020-12-11</td>
+                          <td style="color:black;">20</td>
                           <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
                         </tr>
                       </table>
@@ -275,40 +287,20 @@
                 <div class="row">
                   <div>
                     <p style="text-align: center;margin-left: 180px;">상세 예약현황은 예약확인 페이지에서 확인할 수 있습니다.</p>
-                    <table border="1" style="width: 800px;height: 300px; text-align:center; margin-left: 200px;">
+                    <table border="1" style="width: 800px;height: 100px; text-align:center; margin-left: 200px;">
                         <th style="text-align:center;color:black;">지역</th>
                         <th style="text-align:center;color:black;">체험명</th>
                         <th style="text-align:center;color:black;">체험날짜</th>
                         <th style="text-align:center;color:black;">인원</th>
                         <th style="text-align:center;color:black;">예약</th>
                         <tr>
-                          <td style="color:black;">1</td>
+                          <td style="color:black;">전남 해남군</td>
+                          <td style="color:black;">김장체험</td>
+                          <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
-                          <td style="color:black;">4</td>
                           <td style="color:#84a98c;">예약완료</td>
                         </tr>
-                        <tr>
-                          <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
-                          <td style="color:black;">4</td>
-                          <td style="color:#84a98c;">예약완료</td>
-                        </tr>
-                        <tr>
-                           <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
-                          <td style="color:black;">4</td>
-                          <td style="color:#84a98c;">예약완료</td>
-                        </tr>
-                        <tr>
-                           <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
-                          <td style="color:black;">4</td>
-                          <td style="color:#84a98c;">예약완료</td>
-                        </tr>
+                       
                       </table>
                 </div>
               </div>
@@ -335,16 +327,16 @@
           <!-- 1번째 div -->
           <div class="col-md-5 ftco-animate mb-5" style="text-align: center;">
             <h4 class="ftco-sub-title" style="color: #acc29e;">체험 추천</h4>
-            <h2>과수원에서 농부와 함께,<br> <b style="color:red;">빨간 사과</b>수확 체험</h2><br>
-            <p>빨간 사과가 주렁주렁 달린 드넓은 과수원에서, 
-              농장체험을 즐기고 싶은 어린아이들부터 어른들까지
-              즐거운 사과체험을 여유롭게 즐겨 보세요.</p><br>
+            <h2>농부와 함께,<br> <b style="color:orange;">양파즙</b> 만들기 체험</h2><br>
+            <p>곧 바로 따온 신선한 양파,<br>
+              몸에 좋은 양파를 이용한 양파즙 만들기.<br>
+              즐거운 양파즙 만들기 체험을 가족과 함께 즐겨 보세요.</p><br>
             <p style="background-color: red;width: 200px;margin-left: 120px;">
               <a href="#" class="btn btn-secondary btn-lg" style="color:ivory;">체험 문의&예약</a></p>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-6 ftco-animate img" data-animate-effect="fadeInRight" style="margin-top: 200px;">
-            <img src="images/8.jpg" alt="Free Template by Free-Template.co" style="width: 500px;">
+            <img src="images/무안황토랑.png" alt="Free Template by Free-Template.co" style="width: 500px;">
           </div>
           <!-- 2번째 div -->
             <div class="col-md-5 ftco-animate mb-5" style="margin-top: 100px;margin-right: 400px;">

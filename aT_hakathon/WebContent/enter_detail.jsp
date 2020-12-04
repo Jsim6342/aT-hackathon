@@ -33,7 +33,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">나주 배농장</h2><br>
+            <h2 class="display-4">남쪽창고농수산물협동조합</h2><br>
             <div class="row justify-content-center">
             </div>
           </div>
@@ -58,28 +58,28 @@
                   <!-- 인기순위 -->
                   <div style="float:left;width: 1200px;margin-left: 100px;">
                       <div class="media-body" style="float:left;">
-                       	<img src="images/1.jpg" style="float:left;">
+                       	<img src="images/남쪽창고농수산물협동조합.png" style="float:left;">
                       </div>
                   
                   <div style="float:left;margin-left: 50px;background-color:#eff6e0;padding-left: 20px;padding-top: 20px;margin-right: 20px;width: 420px;">
                   <div class="media menu-item">
                       <div class="media-body">
                         <h5 class="mt-0">기업명</h5><hr>
-                           <p style="color:black;">나주 배농장</p>
+                           <p style="color:black;">남쪽창고농수산물협동조합</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <div class="media-body">
                          <h5 class="mt-0">대표명</h5><hr>
-                           <p style="color:black;">정수범</p>
+                           <p style="color:black;">조희경</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <div class="media-body">
                         <h5 class="mt-0">기업소개</h5><hr>
-                           <p style="color:black;">가족이 운영하는 배농장입니다.</p>
+                           <p style="color:black;">남쪽창고 농수산물협동조합. 땅끝마을 해남 농어민들이 정성스레 재배한 신선하고 저렴한 농수산물</p>
                       </div>
                     </div>
 
@@ -87,7 +87,7 @@
                     <div class="media menu-item">
                       <div class="media-body">
                          <h5 class="mt-0">상품작물</h5><hr>
-                           <p style="color:black;">배</p>
+                           <p style="color:black;">절임배추, 다진마늘, 냉동쑥</p>
                       </div>
                     </div>
                     </div>
@@ -105,10 +105,10 @@
                         <li class="nav-item ftco-animate">
                           <div class="media menu-item">
                             <div class="media-body" style="margin-top: 30px;margin-left: 30px;">
-                              <h5 class="mt-0">배 수확 체험</h5><hr>
-                               <p style="color:black;">좋은 햇볕과 양분을 먹고 자라  잘 익은 배를 갓 수확하기</p>
-                               <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 10명</h6>
-                               <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 나주시 봉황면</h6>
+                              <h5 class="mt-0">김장 체험</h5><hr>
+                               <p style="color:black;">김장준비 해남 절임배추로 간편하게 하세요! 맛있기로 소문난 해남 절임배추 물 맑고 공기 좋은 청정지역 땅끝 해남에서 자라 속이 꽉 차고 단 맛 나는 해남 절임배추로 김장 준비 손 쉽게 해보세요!</p>
+                               <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 20명</h6>
+                               <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6>
                                <button style="margin-left: 500px;margin-bottom: 30px;background-color:#fff;color:black;
                                width: 130px;height: 40px;border-radius:10px;">예약하기</button>
                           </div>
@@ -116,10 +116,10 @@
                         <li class="nav-item ftco-animate">
                           <div class="media menu-item">
                             <div class="media-body" style="margin-top: 30px;margin-left: 30px;">
-                              <h5 class="mt-0">배즙 만들기 체험</h5><hr>
-                                <p style="color:black;">당도가 높아 달콤하고 갓 수확해 신선한 배로 즙 만들기</p>
-                                <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 10명</h6>
-                                <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 나주시 봉황면</h6>
+                              <h5 class="mt-0">쑥캐기 체험</h5><hr>
+                                <p style="color:black;">어릴때 할머니가 해주셨던 그 쑥 국! 이젠 저희가 해드립니다. 남녀노소 구분 없이 할 수 있는 쑥 캐기 체험 지금 바로 떠나볼까요?</p>
+                                <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 20명</h6>
+                                <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6>
                                 <button style="margin-left: 500px;margin-bottom: 30px; background-color:#fff;color:black;
                                 width: 130px;height: 40px;border-radius:10px;">예약하기</button>
                             </div>
@@ -143,23 +143,28 @@
                         <th style="text-align:center;color:black;">닉네임</th>
                         <tr>
                           <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
+                          <td style="color:black;">가족과 좋은시간 보내고왔어요</td>
+                          <td style="color:black;">아들딸맘</td>
                         </tr>
                         <tr>
-                          <td style="color:black;">1</td>
                           <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
+                          <td style="color:black;">친절한 사장님 덕분에 재밌었네요 </td>
+                          <td style="color:black;">mingky공주</td>
                         </tr>
                         <tr>
-                           <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
+                           <td style="color:black;">3</td>
+                          <td style="color:black;">신선한 농산물이 최고였어요</td>
+                          <td style="color:black;">헬스하는남편</td>
                         </tr>
                         <tr>
-                           <td style="color:black;">1</td>
-                          <td style="color:black;">2</td>
-                          <td style="color:black;">3</td>
+                           <td style="color:black;">4</td>
+                          <td style="color:black;">광주 근교 체험 추천합니다</td>
+                          <td style="color:black;">베스트드라이버</td>
+                        </tr>
+                        <tr>
+                           <td style="color:black;">5</td>
+                          <td style="color:black;">부모님 모시고 갔다왔어요</td>
+                          <td style="color:black;">효도가좋아</td>
                         </tr>
                       </table>
                	 </div><hr>

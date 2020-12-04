@@ -32,7 +32,7 @@ public class Review extends HttpServlet {
 		int cnt = dao.Review_write(company, title, nickname, content);
 		
 		if(cnt > 0) {
-			response.sendRedirect(location);
+			response.sendRedirect("enter_detail.jsp");
 		}
 	}
 
