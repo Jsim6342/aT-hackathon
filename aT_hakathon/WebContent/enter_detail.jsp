@@ -28,12 +28,45 @@
 	<title>기업상세페이지</title>
 </head>
 <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
+    
+    <!-- navigation bar begin -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="margin-top: 0px;">
+      <div class="container" style="margin-right: 0px;">
+        <!-- hamburger menu begin -->
+          <div id="menuToggle" >
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        <!-- hamburger menu end -->
+        <a class="navbar-brand" href="index.html" style="margin-left: 320px; font-size:30px; color:black;">오늘의 체험</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" 
+        aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav" style="float: left;">
+          <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
+              data-toggle="modal" data-target="#reservationModal" class="nav-link" style="color:black;">사업등록</a></li>
+            <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
+              data-toggle="modal" data-target="#" class="nav-link" style="color:black;">정보수정</a></li>
+            <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
+              data-toggle="modal" data-target="#reservationModal_3" class="nav-link" style="color:black;">마이페이지</a></li>
+            <li class="nav-item"><a href="login.jsp" target="_blank" class="nav-link" style="color:black;">로그인</a></li>
+            <li class="nav-item"><a href="register.jsp" target="_blank" class="nav-link" style="color:black;">회원가입</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navigation bar END -->
+    
 <!-- 체험 예약하기 begin -->
-    <section class="ftco-section" id="section-menu">
+    <section class="ftco-section" id="section-menu" style="padding-top: 150px;">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">남쪽창고농수산물협동조합</h2><br>
+            <h2 class="display-4">남쪽창고 농수산물 협동조합</h2><br>
             <div class="row justify-content-center">
             </div>
           </div>
@@ -58,7 +91,7 @@
                   <!-- 인기순위 -->
                   <div style="float:left;width: 1200px;margin-left: 100px;">
                       <div class="media-body" style="float:left;">
-                       	<img src="images/남쪽창고농수산물협동조합.png" style="float:left;">
+                       	<img src="images/nam.png" style="float:left;height: 600px;">
                       </div>
                   
                   <div style="float:left;margin-left: 50px;background-color:#eff6e0;padding-left: 20px;padding-top: 20px;margin-right: 20px;width: 420px;">
@@ -106,9 +139,9 @@
                           <div class="media menu-item">
                             <div class="media-body" style="margin-top: 30px;margin-left: 30px;">
                               <h5 class="mt-0">김장 체험</h5><hr>
-                               <p style="color:black;">김장준비 해남 절임배추로 간편하게 하세요! 맛있기로 소문난 해남 절임배추 물 맑고 공기 좋은 청정지역 땅끝 해남에서 자라 속이 꽉 차고 단 맛 나는 해남 절임배추로 김장 준비 손 쉽게 해보세요!</p>
-                               <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 20명</h6>
-                               <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6>
+                               <p style="color:black;">김장준비 해남 절임배추로 간편하게 하세요!<br> 맛있기로 소문난 해남 절임배추 물 맑고 공기 좋은 청정지역 땅끝 해남에서<br> 자라 속이 꽉 차고 단 맛 나는 해남 절임배추로 김장 준비 손 쉽게 해보세요!</p>
+                               <h6 style="font-size: 15px; color:black;">수용인원 최대 20명</h6>
+                               <h6 style="font-size: 15px; color:black;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6>
                                <button style="margin-left: 500px;margin-bottom: 30px;background-color:#fff;color:black;
                                width: 130px;height: 40px;border-radius:10px;">예약하기</button>
                           </div>
@@ -117,9 +150,9 @@
                           <div class="media menu-item">
                             <div class="media-body" style="margin-top: 30px;margin-left: 30px;">
                               <h5 class="mt-0">쑥캐기 체험</h5><hr>
-                                <p style="color:black;">어릴때 할머니가 해주셨던 그 쑥 국! 이젠 저희가 해드립니다. 남녀노소 구분 없이 할 수 있는 쑥 캐기 체험 지금 바로 떠나볼까요?</p>
-                                <h6 class="text-primary menu-price" style="font-size: 15px;">수용인원 최대 20명</h6>
-                                <h6 class="text-primary menu-price" style="font-size: 15px;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6>
+                                <p style="color:black;">어릴때 할머니가 해주셨던 그 쑥 국! 이젠 저희가 해드립니다.<br> 남녀노소 구분 없이 할 수 있는 쑥 캐기 체험 지금 바로 떠나볼까요?</p>
+                                <h6 style="font-size: 15px; color:black;">수용인원 최대 20명</h6>
+                                <h6 style="font-size: 15px; color:black;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6>
                                 <button style="margin-left: 500px;margin-bottom: 30px; background-color:#fff;color:black;
                                 width: 130px;height: 40px;border-radius:10px;">예약하기</button>
                             </div>

@@ -33,7 +33,7 @@
 <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
     
     <!-- navigation bar begin -->
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" >
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="margin-top: 0px;">
       <div class="container" style="margin-right: 0px;">
         <!-- hamburger menu begin -->
           <div id="menuToggle" >
@@ -44,13 +44,16 @@
           </div>
         <!-- hamburger menu end -->
         <a class="navbar-brand" href="index.html" style="margin-left: 320px; font-size:30px;">오늘의 체험</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" 
+        aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav" style="float: left;">
           <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
+              data-toggle="modal" data-target="#reservationModal" class="nav-link">사업등록</a></li>
             <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#reservationModal_4" class="nav-link">정보수정</a></li>
+              data-toggle="modal" data-target="#" class="nav-link">정보수정</a></li>
             <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
               data-toggle="modal" data-target="#reservationModal_3" class="nav-link">마이페이지</a></li>
             <li class="nav-item"><a href="login.jsp" target="_blank" class="nav-link">로그인</a></li>
@@ -61,17 +64,19 @@
     </nav>
       <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="margin-top: 60px;padding-right: 510px;">
         <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" 
+        aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item"><a href="#section-menu" class="nav-link">체험 예약하기</a></li>
               <li class="nav-item"><a href="#section-about" class="nav-link">AI 추천</a></li>
               <li class="nav-item"><a href="#section-contact" class="nav-link">체험위치 찾기</a></li>
-              <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#reservationModal" class="nav-link">사업등록</a></li>
             </ul>
           </div>
         </div>
-    </nav>
+      </nav>
     <!-- navigation bar END -->
    
     <!-- 메인배경 begin -->
@@ -97,7 +102,7 @@
             <h2 class="display-4">체험 예약하기</h2><br>
             <div class="row justify-content-center">
               <div class="col-md-7">
-                <p class="lead">더이상 직접 찾아서 예약하지말고, "오늘의 체험"에서 쉽게 예약하세요. <br> 다양한 체험을 빠르게 검색하고 예약까지 한번에 진행할 수 있습니다.</p>
+                <p class="lead" style="color:black;">농촌체험, 직접 찾지말고 '오늘의 체험'에서 쉽게 예약하세요. <br> 다양한 체험을 빠르게 검색하고 쉽게 예약할 수 있습니다.</p>
               </div>
             </div>
           </div>
@@ -124,27 +129,27 @@
                     <div class="media menu-item">
                       <img class="mr-3" src="images/1.jpg" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">1위 딸기수확 체험</h5>
-                        <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                        <h6 class="text-primary menu-price" style="font-size: 15px;">체험 비용 5만원</h6>
+                        <h5 class="mt-0">1위 딸기수확 체험</h5><hr>
+                        <p style="color:black;">좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확해보세요.</p>
+                        <p style="font-size: 13px; color:#360940;">자세한 정보 확인하기</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/2.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">2위 수제 치즈만들기</h5>
-                        <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                        <h6 class="text-primary menu-price" style="font-size: 15px;">체험 비용 5만원</h6>
+                        <h5 class="mt-0">2위 수제 치즈만들기</h5><hr>
+                        <p style="color:black;">유기농 사료를 먹인 건강한 젖소에서 얻은 원유로 쫄깃하고 고소한 치즈를 만들어보세요.</p>
+                        <p style="font-size: 13px; color:#360940;">자세한 정보 확인하기</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/3.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">3위 사과수확 체험</h5>
-                        <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                        <h6 class="text-primary menu-price" style="font-size: 15px;">체험 비용 5만원</h6>
+                        <h5 class="mt-0">3위 사과수확 체험</h5><hr>
+                        <p style="color:black;">좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 사과를 갓 수확해보세요.</p>
+                        <p style="font-size: 13px; color:#360940;">자세한 정보 확인하기</p>
                       </div>
                     </div>
 
@@ -153,27 +158,27 @@
                     <div class="media menu-item">
                       <img class="mr-3" src="images/4.jpg" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">4위 벼농사 체험</h5>
-                        <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                        <h6 class="text-primary menu-price" style="font-size: 15px;">체험 비용 5만원</h6>
+                        <h5 class="mt-0">4위 벼농사 체험</h5><hr>
+                        <p style="color:black;">푸릇푸릇한 작은 벼 모종을 심어보는 것부터 뜨거운 볕에서 노랗게 익은 벼를 내 손으로 직접 수확하는 체험까지 다양하게 경험해보세요.</p>
+                        <p style="font-size: 13px; color:#360940;">자세한 정보 확인하기</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/5.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">5위 밭농사 체험</h5>
-                        <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                        <h6 class="text-primary menu-price" style="font-size: 15px;">체험 비용 5만원</h6>
+                        <h5 class="mt-0">5위 밭농사 체험</h5><hr>
+                        <p style="color:black;">내 손으로 직접 밭을 골라보고 내가 심고싶은 작물을 심어보는 소중한 체험을 함께 해보세요.</p>
+                        <p style="font-size: 13px; color:#360940;">자세한 정보 확인하기</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/6.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">6위 감수확 체험</h5>
-                        <p>좋은 햇볕과 양분을 먹고 자라 새빨갛게 잘 익은 딸기를 갓 수확하기</p>
-                        <h6 class="text-primary menu-price" style="font-size: 15px;">체험 비용 5만원</h6>
+                        <h5 class="mt-0">6위 감수확 체험</h5><hr>
+                        <p style="color:black;">어여쁜 새도 탐내는 주황색으로 잘 익은 감을 수확해보세요.</p>
+                    	<p style="font-size: 13px; color:#360940;">자세한 정보 확인하기</p>
                       </div>
                     </div>
                   </div>
@@ -224,8 +229,18 @@
                         </li>
                       </ul>
                       <div style="float:right;">
-                        <button style="border-radius: 20px;background-color: #84a98c;height: 60px;width: 130px;
-                        color:#fff; margin-top: 25px;"> 검색하기</button>
+                        <button style="
+                        border-radius: 20px;
+                        background-color: #3CD500;
+                        height: 60px;
+                        width: 130px;
+                        color:#fff;
+                        margin-top: 40px;
+                        border-top-width: 0px;
+                        border-left-width: 0px;
+                        border-right-width: 2px;
+                        border-bottom-width: 2px;
+                        "> 검색하기</button>
                       </div>
                     </div>
                     <!-- 검색결과 -->
@@ -243,7 +258,7 @@
                           <td style="color:black;">김장체험, 쑥캐기체험</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">20</td>
-                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">예약하기</a></td>
                         </tr>
                         <!-- 장성편백산마늘영농조합법인 -->
                         <tr>
@@ -251,7 +266,7 @@
                           <td style="color:black;">마늘,버섯 체험, 교육</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">10</td>
-                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">예약하기</a></td>
                         </tr>
                         <!-- 고추마을영농조합법인 -->
                         <tr>
@@ -259,7 +274,7 @@
                           <td style="color:black;">고추장담그기, 떡볶이 만들기</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">18</td>
-                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">예약하기</a></td>
                         </tr>
                         <!-- 황토랑양파즙 영농조합법인 -->
                         <tr>
@@ -267,7 +282,7 @@
                           <td style="color:black;">양파즙 제조, 견학</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">15</td>
-                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">예약하기</a></td>
                         </tr>
                         <!-- 파도목장 -->
                         <tr>
@@ -275,7 +290,7 @@
                           <td style="color:black;">낙농체험, 직거래</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">20</td>
-                          <td><a href="enter_detail.jsp" style="color:#84a98c;">예약하기</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">예약하기</a></td>
                         </tr>
                       </table>
                     </div>
@@ -298,7 +313,7 @@
                           <td style="color:black;">김장체험</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">2</td>
-                          <td style="color:#84a98c;">예약완료</td>
+                          <td style="color:#3CD500;">예약완료</td>
                         </tr>
                        
                       </table>
@@ -320,35 +335,35 @@
             <h2 class="display-4">AI 추천</h2><br>
             <div class="row justify-content-center">
               <div class="col-md-7">
-                <p class="lead" style="color: #acc29e;">혹시 이런 체험을 찾고 계셨나요?</p>
+                <p class="lead" style="color: #000;">색다른 농촌체험을 소개해드립니다.</p><hr>
               </div>
             </div>
           </div>
           <!-- 1번째 div -->
           <div class="col-md-5 ftco-animate mb-5" style="text-align: center;">
-            <h4 class="ftco-sub-title" style="color: #acc29e;">체험 추천</h4>
-            <h2>농부와 함께,<br> <b style="color:orange;">양파즙</b> 만들기 체험</h2><br>
+            <h4 class="ftco-sub-title" style="color: #000;">체험 추천</h4>
+            <h2>농부와 함께,<br> <b style="color:#FA742B;">양파즙</b> 만들기 체험</h2><br>
             <p>곧 바로 따온 신선한 양파,<br>
               몸에 좋은 양파를 이용한 양파즙 만들기.<br>
               즐거운 양파즙 만들기 체험을 가족과 함께 즐겨 보세요.</p><br>
-            <p style="background-color: red;width: 200px;margin-left: 120px;">
+            <p style="background-color: #FA742B;width: 200px;margin-left: 120px;">
               <a href="#" class="btn btn-secondary btn-lg" style="color:ivory;">체험 문의&예약</a></p>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-6 ftco-animate img" data-animate-effect="fadeInRight" style="margin-top: 200px;">
-            <img src="images/무안황토랑.png" alt="Free Template by Free-Template.co" style="width: 500px;">
+            <img src="images/muan.png" alt="Free Template by Free-Template.co" style="width: 450px;height: 350px;">
           </div>
           <!-- 2번째 div -->
             <div class="col-md-5 ftco-animate mb-5" style="margin-top: 100px;margin-right: 400px;">
-              <img src="images/7.jpg" alt="Free Template by Free-Template.co" style="width: 500px;">
+              <img src="images/7.jpg" alt="Free Template by Free-Template.co" style="width: 500px;height: 350px;">
             </div>
             <div class="col-md-1" style="margin-right: 100px;"></div>
-            <div class="col-md-6 ftco-animate img" data-animate-effect="fadeInRight" style="margin-top: 630px;text-align: center;margin-right: 100px;"">
-              <h4 class="ftco-sub-title" style="color: #acc29e;">농산물 추천</h4>
-              <h2>직거래를 통한 신선하고<br> <b style="color:green;">저렴한 농산물</b> 구매 </h2><br>
+            <div class="col-md-6 ftco-animate img" data-animate-effect="fadeInRight" style="margin-top: 680px;text-align: center;margin-right: 100px;">
+              <h4 class="ftco-sub-title" style="color: #000;">농산물 추천</h4>
+              <h2>직거래를 통한 신선하고<br> <b style="color:#3CD500;">저렴한 농산물</b> 구매 </h2><br>
               <p>농촌을 직접 방문하여 갓 수확한 신선한 농산물을<br>
                   유통마진없이 원가에 저렴하게 구매하세요.</p><br>
-              <p style="background-color: green;width: 170px;margin-left: 250px;">
+              <p style="background-color: #3CD500;width: 170px;margin-left: 250px;">
                 <a href="#" class="btn btn-secondary btn-lg" style="color:ivory;">농산물 보기</a></p>
             </div>
         </div>
@@ -382,10 +397,11 @@
 
     <footer class="ftco-footer ftco-bg-dark ftco-section" style="padding-top: 0px;padding-bottom: 0px;">
       <div class="container">
-        <img src="images/0.JPG" alt="로고" style="margin-left: 480px;">
+        <img src="images/logo3.JPG" alt="로고" style="margin-left: 500px;width: 150px;height: 100px;margin-bottom: 10px;margin-top: 20px;">
         <div class="row ftco-animate">
           <div class="col-md text-left">
-            <p style="color:#FFF; text-align: center;">&copy; Taste 2018. All Rights Reserved.  Made with <span class="icon-heart text-danger"></span>  by <a href="https://free-template.co/" style="color:#FFF;">Free-Template.co</a></p>
+            <p style="color:black; text-align: center;">&copy; Taste 2018. All Rights Reserved.  Made with <span class="icon-heart text-danger"></span>  
+            by <a href="https://free-template.co/" style="color:black;">Free-Template.co</a></p>
           </div>
         </div>
       </div>
@@ -466,7 +482,7 @@
 				                    </th>
 				                </tr>
 				            </table>
-				            <br><button style="margin-left:300px;margin-bottom: 30px;background-color:#84a98c;color:#fff;width: 130px;height: 40px; border-radius:10px;">사업등록완료</button>
+				            <br><button style="margin-left:300px;margin-bottom: 30px;background-color:#3CD500;color:#fff;width: 130px;height: 40px; border-radius:10px;">사업등록완료</button>
 			                </form>
 			              </div>
 			            </div>
