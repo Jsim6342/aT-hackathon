@@ -265,11 +265,11 @@
                         border-left-width: 0px;
                         border-right-width: 2px;
                         border-bottom-width: 2px;
-                        "> 검색하기</button>
+                        " onclick="doDisplay()"> 검색하기</button>
                       </div>
                     </div>
                     <!-- 검색결과 -->
-                    <div style="width: 1000px; height: 300px;"> 
+                    <div id="show_table" style="width: 1000px; height: 300px;"> 
                      
                       <table border="1" style="width: 800px;height: 300px; text-align:center;">
                         <th style="text-align:center;color:black;">지역</th>
@@ -757,6 +757,16 @@
     <script src="js/google-map.js"></script>
 
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+    function doDisplay() {
+    	var con = document.getElementById("show_table");
+    	if(con.style.display=='none') {
+    		con.style.display = 'block';
+    	}else{
+    		con.stlye.display = 'none';
+    	}
+    }
+    </script>
 
 </body>
 </html>
