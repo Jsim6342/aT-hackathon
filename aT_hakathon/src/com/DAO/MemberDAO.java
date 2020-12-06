@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.DTO.MemberDTO;
+
 public class MemberDAO {
 
 	// 전역변수 선언
@@ -80,6 +82,40 @@ public class MemberDAO {
 			dao.close();
 		}
 		return check;
+	}
+	
+	//id값으로 회원 조회 기능
+	public MemberDTO member_select(String id) {
+		
+		
+		MemberDTO member = new MemberDTO();
+		
+		try {
+			
+			//DB연결 기능
+			dao.getConn();
+			
+			String sql = "select * from member where id = ?";
+			pst = Connect.conn.prepareStatement(sql); //static변수 Connect.conn 사용
+			pst.setString(1, id);
+			
+			rs = pst.executeQuery();
+			
+			if(rs.next()) { //rs.next() 함수는 1행씩 데이터를 확인하며 값이 있으면 True, 없으면 False를 반환 
+				member = new MemberDTO(rs.getNString(1), rs.getNString(2), rs.getNString(3), rs.getNString(4), rs.getNString(5), rs.getNString(6));
+			}else {
+				member = null;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			//DB연결 종료
+			dao.close();
+		}
+		
+		return member;
 	}
 	
 }

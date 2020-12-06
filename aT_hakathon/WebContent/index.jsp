@@ -1,14 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@page import="com.DTO.MemberDTO"%>
+<%@page import="com.DAO.MemberDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <!-- 
     More Templates Visit ==> Free-Template.co
     -->
     <title>Taste - Free Bootstrap 4 Template by Free-Template.co</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Free Template by Free-Template.co" />
     <meta name="keywords" content="free bootstrap 4, free bootstrap 4 template, free website templates, free html5, free template, free website template, html5, css3, mobile first, responsive" />
@@ -31,6 +33,14 @@
 <title>Insert title here</title>
 </head>
 <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
+
+    <% //ìŠ¤í¬ë¦½í‹€ë¦¿
+ 
+ 	//sessionê°’ id ê°€ì ¸ì˜¤ê¸°
+	String id = (String)session.getAttribute("id");
+	System.out.println("í˜„ìž¬ ì ‘ì†í•œ ì‚¬ëžŒì˜ id: " + id);
+	
+ %>
     
     <!-- navigation bar begin -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="margin-top: 0px;">
@@ -43,21 +53,36 @@
             <span></span>
           </div>
         <!-- hamburger menu end -->
-        <a class="navbar-brand" href="index.jsp" style="margin-left: 320px; font-size:30px;">¿À´ÃÀÇ Ã¼Çè</a>
+        <a class="navbar-brand" href="index.jsp" style="margin-left: 320px; font-size:30px;">ì˜¤ëŠ˜ì˜ ì²´í—˜</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" 
         aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
+        
+        <%
+        
+        MemberDAO mem_dao = new MemberDAO();
+        MemberDTO member = new MemberDTO();
+        member = mem_dao.member_select(id);
+        
+        %>
+        
         <div class="collapse navbar-collapse" id="ftco-nav" style="float: left;">
           <ul class="navbar-nav ml-auto">
+          <% if(id!=null) {%>
+          <%  if(member.getClassify().equals("company")) { %>
           <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#reservationModal" class="nav-link">»ç¾÷µî·Ï</a></li>
+              data-toggle="modal" data-target="#reservationModal" class="nav-link">ì‚¬ì—…ë“±ë¡</a></li>
+          <% } %>
+          <% } %>      
+          <% if(id==null) { %>
+            <li class="nav-item"><a href="login.jsp" target="_blank" class="nav-link">ë¡œê·¸ì¸</a></li>
+          <% }else { %>
             <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#" class="nav-link">Á¤º¸¼öÁ¤</a></li>
-            <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#reservationModal_3" class="nav-link">¸¶ÀÌÆäÀÌÁö</a></li>
-            <li class="nav-item"><a href="login.jsp" target="_blank" class="nav-link">·Î±×ÀÎ</a></li>
-            <li class="nav-item"><a href="register.jsp" target="_blank" class="nav-link">È¸¿ø°¡ÀÔ</a></li>
+              data-toggle="modal" data-target="#reservationModal_3" class="nav-link">ë§ˆì´íŽ˜ì´ì§€</a></li>
+            <li class="nav-item"><a href="LogoutService" target="_blank" class="nav-link">ë¡œê·¸ì•„ì›ƒ</a></li>
+          <% } %>
+            <li class="nav-item"><a href="register.jsp" target="_blank" class="nav-link">íšŒì›ê°€ìž…</a></li>
           </ul>
         </div>
       </div>
@@ -70,86 +95,86 @@
         </button>
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a href="#section-menu" class="nav-link">Ã¼Çè ¿¹¾àÇÏ±â</a></li>
-              <li class="nav-item"><a href="#section-about" class="nav-link">AI ÃßÃµ</a></li>
-              <li class="nav-item"><a href="#section-contact" class="nav-link">Ã¼ÇèÀ§Ä¡ Ã£±â</a></li>
+              <li class="nav-item"><a href="#section-menu" class="nav-link">ì²´í—˜ ì˜ˆì•½í•˜ê¸°</a></li>
+              <li class="nav-item"><a href="#section-about" class="nav-link">AI ì¶”ì²œ</a></li>
+              <li class="nav-item"><a href="#section-contact" class="nav-link">ì²´í—˜ìœ„ì¹˜ ì°¾ê¸°</a></li>
             </ul>
           </div>
         </div>
       </nav>
     <!-- navigation bar END -->
    
-    <!-- ¸ÞÀÎ¹è°æ begin -->
+    <!-- ë©”ì¸ë°°ê²½ begin -->
     <section class="ftco-cover" style="background-image:url(images/10.JPG);" 
     id="section-home">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center ftco-vh-100">
           <div class="col-md-12">
-            <h1 class="ftco-heading ftco-animate mb-3"  style="font-family:serif;">³óÃÌ, Ã¼ÇèÀ¸·Î ¹°µé´Ù</h1>
-            <h2 class="h5 ftco-subheading mb-5 ftco-animate">´ç½Å°ú 6Â÷ »ê¾÷À» °¡±îÀÌ,<br> ¿À´ÃÀÇ Ã¼Çè¿¡¼­ ´Ù¾çÇÑ 
-              ³óÃÌÃ¼ÇèÀ» ¿¹¾àÇÏ°í ³ó»ê¹°À» ±¸°æÇØº¸¼¼¿ä.</h2> 
+            <h1 class="ftco-heading ftco-animate mb-3"  style="font-family:serif;">ë†ì´Œ, ì²´í—˜ìœ¼ë¡œ ë¬¼ë“¤ë‹¤</h1>
+            <h2 class="h5 ftco-subheading mb-5 ftco-animate">ë‹¹ì‹ ê³¼ 6ì°¨ ì‚°ì—…ì„ ê°€ê¹Œì´,<br> ì˜¤ëŠ˜ì˜ ì²´í—˜ì—ì„œ ë‹¤ì–‘í•œ 
+              ë†ì´Œì²´í—˜ì„ ì˜ˆì•½í•˜ê³  ë†ì‚°ë¬¼ì„ êµ¬ê²½í•´ë³´ì„¸ìš”.</h2> 
           </div>
         </div>
       </div>
     </section>
-    <!-- ¸ÞÀÎ¹è°æ END -->
+    <!-- ë©”ì¸ë°°ê²½ END -->
 
-    <!-- Ã¼Çè ¿¹¾àÇÏ±â begin -->
+    <!-- ì²´í—˜ ì˜ˆì•½í•˜ê¸° begin -->
     <section class="ftco-section" id="section-menu">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">Ã¼Çè ¿¹¾àÇÏ±â</h2><br>
+            <h2 class="display-4">ì²´í—˜ ì˜ˆì•½í•˜ê¸°</h2><br>
             <div class="row justify-content-center">
               <div class="col-md-7">
-                <p class="lead" style="color:black;">³óÃÌÃ¼Çè, Á÷Á¢ Ã£Áö¸»°í '¿À´ÃÀÇ Ã¼Çè'¿¡¼­ ½±°Ô ¿¹¾àÇÏ¼¼¿ä. <br> ´Ù¾çÇÑ Ã¼ÇèÀ» ºü¸£°Ô °Ë»öÇÏ°í ½±°Ô ¿¹¾àÇÒ ¼ö ÀÖ½À´Ï´Ù.</p>
+                <p class="lead" style="color:black;">ë†ì´Œì²´í—˜, ì§ì ‘ ì°¾ì§€ë§ê³  'ì˜¤ëŠ˜ì˜ ì²´í—˜'ì—ì„œ ì‰½ê²Œ ì˜ˆì•½í•˜ì„¸ìš”. <br> ë‹¤ì–‘í•œ ì²´í—˜ì„ ë¹ ë¥´ê²Œ ê²€ìƒ‰í•˜ê³  ì‰½ê²Œ ì˜ˆì•½í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
               </div>
             </div>
           </div>
 
           <div class="col-md-12 text-center">
 
-            <ul class="nav ftco-tab-nav nav-pills mb-5" idw="pills-tab" role="tablist">
+            <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
               <li class="nav-item ftco-animate">
-                <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#pills-breakfast" role="tab" aria-controls="pills-breakfast" aria-selected="true">Ã¼Çè ÀÎ±â¼øÀ§</a>
+                <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#pills-breakfast" role="tab" aria-controls="pills-breakfast" aria-selected="true">ì²´í—˜ ì¸ê¸°ìˆœìœ„</a>
               </li>
               <li class="nav-item ftco-animate">
-                <a class="nav-link" id="pills-lunch-tab" data-toggle="pill" href="#pills-lunch" role="tab" aria-controls="pills-lunch" aria-selected="false">Ã¼Çè°Ë»ö</a>
+                <a class="nav-link" id="pills-lunch-tab" data-toggle="pill" href="#pills-lunch" role="tab" aria-controls="pills-lunch" aria-selected="false">ì²´í—˜ê²€ìƒ‰</a>
               </li>
               <li class="nav-item ftco-animate">
-                <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#pills-dinner" role="tab" aria-controls="pills-dinner" aria-selected="false">¿¹¾àÈ®ÀÎ</a>
+                <a class="nav-link" id="pills-dinner-tab" data-toggle="pill" href="#pills-dinner" role="tab" aria-controls="pills-dinner" aria-selected="false">ì˜ˆì•½í™•ì¸</a>
               </li>
             </ul>
 
             <div class="tab-content text-left">
               <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
                 <div class="row">
-                  <!-- ÀÎ±â¼øÀ§ -->
+                  <!-- ì¸ê¸°ìˆœìœ„ -->
                   <div class="col-md-6 ftco-animate">
                     <div class="media menu-item">
                       <img class="mr-3" src="images/1.jpg" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">1À§ µþ±â¼öÈ® Ã¼Çè</h5><hr>
-                        <p style="color:black;">ÁÁÀº ÇÞºµ°ú ¾çºÐÀ» ¸Ô°í ÀÚ¶ó »õ»¡°²°Ô Àß ÀÍÀº µþ±â¸¦ °« ¼öÈ®ÇØº¸¼¼¿ä.</p>
-                        <p style="font-size: 13px; color:#360940;">ÀÚ¼¼ÇÑ Á¤º¸ È®ÀÎÇÏ±â</p>
+                        <h5 class="mt-0">1ìœ„ ë”¸ê¸°ìˆ˜í™• ì²´í—˜</h5><hr>
+                        <p style="color:black;">ì¢‹ì€ í–‡ë³•ê³¼ ì–‘ë¶„ì„ ë¨¹ê³  ìžë¼ ìƒˆë¹¨ê°›ê²Œ ìž˜ ìµì€ ë”¸ê¸°ë¥¼ ê°“ ìˆ˜í™•í•´ë³´ì„¸ìš”.</p>
+                        <p style="font-size: 13px; color:#360940;">ìžì„¸í•œ ì •ë³´ í™•ì¸í•˜ê¸°</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/2.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">2À§ ¼öÁ¦ Ä¡Áî¸¸µé±â</h5><hr>
-                        <p style="color:black;">À¯±â³ó »ç·á¸¦ ¸ÔÀÎ °Ç°­ÇÑ Á¥¼Ò¿¡¼­ ¾òÀº ¿øÀ¯·Î ÂÌ±êÇÏ°í °í¼ÒÇÑ Ä¡Áî¸¦ ¸¸µé¾îº¸¼¼¿ä.</p>
-                        <p style="font-size: 13px; color:#360940;">ÀÚ¼¼ÇÑ Á¤º¸ È®ÀÎÇÏ±â</p>
+                        <h5 class="mt-0">2ìœ„ ìˆ˜ì œ ì¹˜ì¦ˆë§Œë“¤ê¸°</h5><hr>
+                        <p style="color:black;">ìœ ê¸°ë† ì‚¬ë£Œë¥¼ ë¨¹ì¸ ê±´ê°•í•œ ì –ì†Œì—ì„œ ì–»ì€ ì›ìœ ë¡œ ì«„ê¹ƒí•˜ê³  ê³ ì†Œí•œ ì¹˜ì¦ˆë¥¼ ë§Œë“¤ì–´ë³´ì„¸ìš”.</p>
+                        <p style="font-size: 13px; color:#360940;">ìžì„¸í•œ ì •ë³´ í™•ì¸í•˜ê¸°</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/3.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">3À§ »ç°ú¼öÈ® Ã¼Çè</h5><hr>
-                        <p style="color:black;">ÁÁÀº ÇÞºµ°ú ¾çºÐÀ» ¸Ô°í ÀÚ¶ó »õ»¡°²°Ô Àß ÀÍÀº »ç°ú¸¦ °« ¼öÈ®ÇØº¸¼¼¿ä.</p>
-                        <p style="font-size: 13px; color:#360940;">ÀÚ¼¼ÇÑ Á¤º¸ È®ÀÎÇÏ±â</p>
+                        <h5 class="mt-0">3ìœ„ ì‚¬ê³¼ìˆ˜í™• ì²´í—˜</h5><hr>
+                        <p style="color:black;">ì¢‹ì€ í–‡ë³•ê³¼ ì–‘ë¶„ì„ ë¨¹ê³  ìžë¼ ìƒˆë¹¨ê°›ê²Œ ìž˜ ìµì€ ì‚¬ê³¼ë¥¼ ê°“ ìˆ˜í™•í•´ë³´ì„¸ìš”.</p>
+                        <p style="font-size: 13px; color:#360940;">ìžì„¸í•œ ì •ë³´ í™•ì¸í•˜ê¸°</p>
                       </div>
                     </div>
 
@@ -158,55 +183,55 @@
                     <div class="media menu-item">
                       <img class="mr-3" src="images/4.jpg" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">4À§ º­³ó»ç Ã¼Çè</h5><hr>
-                        <p style="color:black;">Çª¸©Çª¸©ÇÑ ÀÛÀº º­ ¸ðÁ¾À» ½É¾îº¸´Â °ÍºÎÅÍ ¶ß°Å¿î ºµ¿¡¼­ ³ë¶þ°Ô ÀÍÀº º­¸¦ ³» ¼ÕÀ¸·Î Á÷Á¢ ¼öÈ®ÇÏ´Â Ã¼Çè±îÁö ´Ù¾çÇÏ°Ô °æÇèÇØº¸¼¼¿ä.</p>
-                        <p style="font-size: 13px; color:#360940;">ÀÚ¼¼ÇÑ Á¤º¸ È®ÀÎÇÏ±â</p>
+                        <h5 class="mt-0">4ìœ„ ë²¼ë†ì‚¬ ì²´í—˜</h5><hr>
+                        <p style="color:black;">í‘¸ë¦‡í‘¸ë¦‡í•œ ìž‘ì€ ë²¼ ëª¨ì¢…ì„ ì‹¬ì–´ë³´ëŠ” ê²ƒë¶€í„° ëœ¨ê±°ìš´ ë³•ì—ì„œ ë…¸ëž—ê²Œ ìµì€ ë²¼ë¥¼ ë‚´ ì†ìœ¼ë¡œ ì§ì ‘ ìˆ˜í™•í•˜ëŠ” ì²´í—˜ê¹Œì§€ ë‹¤ì–‘í•˜ê²Œ ê²½í—˜í•´ë³´ì„¸ìš”.</p>
+                        <p style="font-size: 13px; color:#360940;">ìžì„¸í•œ ì •ë³´ í™•ì¸í•˜ê¸°</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/5.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">5À§ ¹ç³ó»ç Ã¼Çè</h5><hr>
-                        <p style="color:black;">³» ¼ÕÀ¸·Î Á÷Á¢ ¹çÀ» °ñ¶óº¸°í ³»°¡ ½É°í½ÍÀº ÀÛ¹°À» ½É¾îº¸´Â ¼ÒÁßÇÑ Ã¼ÇèÀ» ÇÔ²² ÇØº¸¼¼¿ä.</p>
-                        <p style="font-size: 13px; color:#360940;">ÀÚ¼¼ÇÑ Á¤º¸ È®ÀÎÇÏ±â</p>
+                        <h5 class="mt-0">5ìœ„ ë°­ë†ì‚¬ ì²´í—˜</h5><hr>
+                        <p style="color:black;">ë‚´ ì†ìœ¼ë¡œ ì§ì ‘ ë°­ì„ ê³¨ë¼ë³´ê³  ë‚´ê°€ ì‹¬ê³ ì‹¶ì€ ìž‘ë¬¼ì„ ì‹¬ì–´ë³´ëŠ” ì†Œì¤‘í•œ ì²´í—˜ì„ í•¨ê»˜ í•´ë³´ì„¸ìš”.</p>
+                        <p style="font-size: 13px; color:#360940;">ìžì„¸í•œ ì •ë³´ í™•ì¸í•˜ê¸°</p>
                       </div>
                     </div>
 
                     <div class="media menu-item">
                       <img class="mr-3" src="images/6.jfif" class="img-fluid" alt="Free Template by Free-Template.co">
                       <div class="media-body">
-                        <h5 class="mt-0">6À§ °¨¼öÈ® Ã¼Çè</h5><hr>
-                        <p style="color:black;">¾î¿©»Û »õµµ Å½³»´Â ÁÖÈ²»öÀ¸·Î Àß ÀÍÀº °¨À» ¼öÈ®ÇØº¸¼¼¿ä.</p>
-                    	<p style="font-size: 13px; color:#360940;">ÀÚ¼¼ÇÑ Á¤º¸ È®ÀÎÇÏ±â</p>
+                        <h5 class="mt-0">6ìœ„ ê°ìˆ˜í™• ì²´í—˜</h5><hr>
+                        <p style="color:black;">ì–´ì—¬ìœ ìƒˆë„ íƒë‚´ëŠ” ì£¼í™©ìƒ‰ìœ¼ë¡œ ìž˜ ìµì€ ê°ì„ ìˆ˜í™•í•´ë³´ì„¸ìš”.</p>
+                    	<p style="font-size: 13px; color:#360940;">ìžì„¸í•œ ì •ë³´ í™•ì¸í•˜ê¸°</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             
-              <!-- °Ë»öÇÏ±â -->
+              <!-- ê²€ìƒ‰í•˜ê¸° -->
               <div class="tab-pane fade" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab">
                 <div class="row">
                   <div class="col-md-6 ftco-animate" style="padding-left: 200px;">
-                     <!-- Ã¼Çè °Ë»öºÎºÐ -->
+                     <!-- ì²´í—˜ ê²€ìƒ‰ë¶€ë¶„ -->
                     <div style="width:800px;">
                       <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
                         <li class="nav-item ftco-animate">
                           <div class="media menu-item">
                             <div class="media-body">
-                              <h5 class="mt-0">Áö¿ª°Ë»ö</h5>
+                              <h5 class="mt-0">ì§€ì—­ê²€ìƒ‰</h5>
                                 <select name="location" id="location" style="height:40px; width:250px;">
-                                <option value="">Áö¿ªÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.</option>
-                                <option value="">°æ±âµµ</option>
-                                <option value="">°­¿øµµ</option>
-                                <option value="">Àü¶óºÏµµ</option>
-                                <option value="">Àü¶ó³²µµ</option>
-                                <option value="">ÃæÃ»ºÏµµ</option>
-                                <option value="">ÃæÃ»³²µµ</option>
-                                <option value="">°æ»óºÏµµ</option>
-                                <option value="">°æ»ó³²µµ</option>
-                                <option value="">Á¦ÁÖÆ¯º°ÀÚÄ¡µµ</option>
+                                <option value="">ì§€ì—­ì„ ì„ íƒí•´ì£¼ì„¸ìš”.</option>
+                                <option value="">ê²½ê¸°ë„</option>
+                                <option value="">ê°•ì›ë„</option>
+                                <option value="">ì „ë¼ë¶ë„</option>
+                                <option value="">ì „ë¼ë‚¨ë„</option>
+                                <option value="">ì¶©ì²­ë¶ë„</option>
+                                <option value="">ì¶©ì²­ë‚¨ë„</option>
+                                <option value="">ê²½ìƒë¶ë„</option>
+                                <option value="">ê²½ìƒë‚¨ë„</option>
+                                <option value="">ì œì£¼íŠ¹ë³„ìžì¹˜ë„</option>
                               </select>
                             </div>
                           </div>
@@ -214,7 +239,7 @@
                         <li class="nav-item ftco-animate">
                           <div class="media menu-item">
                             <div class="media-body">
-                              <h5 class="mt-0">³¯Â¥ ¹× ½Ã°£</h5>
+                              <h5 class="mt-0">ë‚ ì§œ ë° ì‹œê°„</h5>
                               <input type="date" name="date" style="height:40px; width:250px;"/>
                             </div>
                           </div>
@@ -222,8 +247,8 @@
                         <li class="nav-item ftco-animate">
                           <div class="media menu-item">
                             <div class="media-body">
-                              <h5 class="mt-0">ÀÎ¿ø</h5>
-                              <input type="number" placeholder="--¸í" min="0" max="50" step="1" style="height:40px; width:90px;"/>
+                              <h5 class="mt-0">ì¸ì›</h5>
+                              <input type="number" placeholder="--ëª…" min="0" max="50" step="1" style="height:40px; width:90px;"/>
                             </div>
                           </div>
                         </li>
@@ -240,80 +265,80 @@
                         border-left-width: 0px;
                         border-right-width: 2px;
                         border-bottom-width: 2px;
-                        "> °Ë»öÇÏ±â</button>
+                        "> ê²€ìƒ‰í•˜ê¸°</button>
                       </div>
                     </div>
-                    <!-- °Ë»ö°á°ú -->
+                    <!-- ê²€ìƒ‰ê²°ê³¼ -->
                     <div style="width: 1000px; height: 300px;"> 
                      
                       <table border="1" style="width: 800px;height: 300px; text-align:center;">
-                        <th style="text-align:center;color:black;">Áö¿ª</th>
-                        <th style="text-align:center;color:black;">Ã¼Çè¸í</th>
-                        <th style="text-align:center;color:black;">Ã¼Çè³¯Â¥</th>
-                        <th style="text-align:center;color:black;">ÀÎ¿ø</th>
-                        <th style="text-align:center;color:black;">¿¹¾à</th>
-                        <!-- ³²ÂÊÃ¢°í³ó¼ö»ê¹°Çùµ¿Á¶ÇÕ -->
+                        <th style="text-align:center;color:black;">ì§€ì—­</th>
+                        <th style="text-align:center;color:black;">ì²´í—˜ëª…</th>
+                        <th style="text-align:center;color:black;">ì²´í—˜ë‚ ì§œ</th>
+                        <th style="text-align:center;color:black;">ì¸ì›</th>
+                        <th style="text-align:center;color:black;">ì˜ˆì•½</th>
+                        <!-- ë‚¨ìª½ì°½ê³ ë†ìˆ˜ì‚°ë¬¼í˜‘ë™ì¡°í•© -->
                         <tr>
-                          <td style="color:black;">Àü³² ÇØ³²±º</td>
-                          <td style="color:black;">±èÀåÃ¼Çè, ¾¦Ä³±âÃ¼Çè</td>
+                          <td style="color:black;">ì „ë‚¨ í•´ë‚¨êµ°</td>
+                          <td style="color:black;">ê¹€ìž¥ì²´í—˜, ì‘¥ìºê¸°ì²´í—˜</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">20</td>
-                          <td><a href="enter_detail.jsp" style="color:#3CD500;">¿¹¾àÇÏ±â</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">ì˜ˆì•½í•˜ê¸°</a></td>
                         </tr>
-                        <!-- Àå¼ºÆí¹é»ê¸¶´Ã¿µ³óÁ¶ÇÕ¹ýÀÎ -->
+                        <!-- ìž¥ì„±íŽ¸ë°±ì‚°ë§ˆëŠ˜ì˜ë†ì¡°í•©ë²•ì¸ -->
                         <tr>
-                          <td style="color:black;">Àü³² Àå¼º±º</td>
-                          <td style="color:black;">¸¶´Ã,¹ö¼¸ Ã¼Çè, ±³À°</td>
+                          <td style="color:black;">ì „ë‚¨ ìž¥ì„±êµ°</td>
+                          <td style="color:black;">ë§ˆëŠ˜,ë²„ì„¯ ì²´í—˜, êµìœ¡</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">10</td>
-                          <td><a href="enter_detail.jsp" style="color:#3CD500;">¿¹¾àÇÏ±â</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">ì˜ˆì•½í•˜ê¸°</a></td>
                         </tr>
-                        <!-- °íÃß¸¶À»¿µ³óÁ¶ÇÕ¹ýÀÎ -->
+                        <!-- ê³ ì¶”ë§ˆì„ì˜ë†ì¡°í•©ë²•ì¸ -->
                         <tr>
-                           <td style="color:black;">Àü³² ¿µ±¤±º</td>
-                          <td style="color:black;">°íÃßÀå´ã±×±â, ¶±ººÀÌ ¸¸µé±â</td>
+                           <td style="color:black;">ì „ë‚¨ ì˜ê´‘êµ°</td>
+                          <td style="color:black;">ê³ ì¶”ìž¥ë‹´ê·¸ê¸°, ë–¡ë³¶ì´ ë§Œë“¤ê¸°</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">18</td>
-                          <td><a href="enter_detail.jsp" style="color:#3CD500;">¿¹¾àÇÏ±â</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">ì˜ˆì•½í•˜ê¸°</a></td>
                         </tr>
-                        <!-- È²Åä¶û¾çÆÄÁó ¿µ³óÁ¶ÇÕ¹ýÀÎ -->
+                        <!-- í™©í† ëž‘ì–‘íŒŒì¦™ ì˜ë†ì¡°í•©ë²•ì¸ -->
                         <tr>
-                           <td style="color:black;">Àü³² ¹«¾È±º</td>
-                          <td style="color:black;">¾çÆÄÁó Á¦Á¶, °ßÇÐ</td>
+                           <td style="color:black;">ì „ë‚¨ ë¬´ì•ˆêµ°</td>
+                          <td style="color:black;">ì–‘íŒŒì¦™ ì œì¡°, ê²¬í•™</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">15</td>
-                          <td><a href="enter_detail.jsp" style="color:#3CD500;">¿¹¾àÇÏ±â</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">ì˜ˆì•½í•˜ê¸°</a></td>
                         </tr>
-                        <!-- ÆÄµµ¸ñÀå -->
+                        <!-- íŒŒë„ëª©ìž¥ -->
                         <tr>
-                           <td style="color:black;">Àü³² ¹«¾È±º</td>
-                          <td style="color:black;">³«³óÃ¼Çè, Á÷°Å·¡</td>
+                           <td style="color:black;">ì „ë‚¨ ë¬´ì•ˆêµ°</td>
+                          <td style="color:black;">ë‚™ë†ì²´í—˜, ì§ê±°ëž˜</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">20</td>
-                          <td><a href="enter_detail.jsp" style="color:#3CD500;">¿¹¾àÇÏ±â</a></td>
+                          <td><a href="enter_detail.jsp" style="color:#3CD500;">ì˜ˆì•½í•˜ê¸°</a></td>
                         </tr>
                       </table>
                     </div>
                 </div>
               </div>
             </div>
-              <!-- ¿¹¾àÈ®ÀÎ -->
+              <!-- ì˜ˆì•½í™•ì¸ -->
               <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
                 <div class="row">
                   <div>
-                    <p style="text-align: center;margin-left: 180px;">»ó¼¼ ¿¹¾àÇöÈ²Àº ¿¹¾àÈ®ÀÎ ÆäÀÌÁö¿¡¼­ È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù.</p>
+                    <p style="text-align: center;margin-left: 180px;">ìƒì„¸ ì˜ˆì•½í˜„í™©ì€ ì˜ˆì•½í™•ì¸ íŽ˜ì´ì§€ì—ì„œ í™•ì¸í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.</p>
                     <table border="1" style="width: 800px;height: 100px; text-align:center; margin-left: 200px;">
-                        <th style="text-align:center;color:black;">Áö¿ª</th>
-                        <th style="text-align:center;color:black;">Ã¼Çè¸í</th>
-                        <th style="text-align:center;color:black;">Ã¼Çè³¯Â¥</th>
-                        <th style="text-align:center;color:black;">ÀÎ¿ø</th>
-                        <th style="text-align:center;color:black;">¿¹¾à</th>
+                        <th style="text-align:center;color:black;">ì§€ì—­</th>
+                        <th style="text-align:center;color:black;">ì²´í—˜ëª…</th>
+                        <th style="text-align:center;color:black;">ì²´í—˜ë‚ ì§œ</th>
+                        <th style="text-align:center;color:black;">ì¸ì›</th>
+                        <th style="text-align:center;color:black;">ì˜ˆì•½</th>
                         <tr>
-                          <td style="color:black;">Àü³² ÇØ³²±º</td>
-                          <td style="color:black;">±èÀåÃ¼Çè</td>
+                          <td style="color:black;">ì „ë‚¨ í•´ë‚¨êµ°</td>
+                          <td style="color:black;">ê¹€ìž¥ì²´í—˜</td>
                           <td style="color:black;">2020-12-11</td>
                           <td style="color:black;">2</td>
-                          <td style="color:#3CD500;">¿¹¾à¿Ï·á</td>
+                          <td><a href="#" style="color:#3CD500;">ì˜ˆì•½ì·¨ì†Œ</a></td>
                         </tr>
                        
                       </table>
@@ -325,60 +350,60 @@
       </div>
     </div>
   </section>
-    <!-- Ã¼Çè ¿¹¾àÇÏ±â END -->
+    <!-- ì²´í—˜ ì˜ˆì•½í•˜ê¸° END -->
 
-    <!-- AI ÃßÃµ ºÎºÐ begin  -->
+    <!-- AI ì¶”ì²œ ë¶€ë¶„ begin  -->
     <section class="ftco-section bg-light" id="section-about">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">AI ÃßÃµ</h2><br>
+            <h2 class="display-4">AI ì¶”ì²œ</h2><br>
             <div class="row justify-content-center">
               <div class="col-md-7">
-                <p class="lead" style="color: #000;">»ö´Ù¸¥ ³óÃÌÃ¼ÇèÀ» ¼Ò°³ÇØµå¸³´Ï´Ù.</p><hr>
+                <p class="lead" style="color: #000;">ìƒ‰ë‹¤ë¥¸ ë†ì´Œì²´í—˜ì„ ì†Œê°œí•´ë“œë¦½ë‹ˆë‹¤.</p><hr>
               </div>
             </div>
           </div>
-          <!-- 1¹øÂ° div -->
+          <!-- 1ë²ˆì§¸ div -->
           <div class="col-md-5 ftco-animate mb-5" style="text-align: center;">
-            <h4 class="ftco-sub-title" style="color: #000;">Ã¼Çè ÃßÃµ</h4>
-            <h2>³óºÎ¿Í ÇÔ²²,<br> <b style="color:#FA742B;">¾çÆÄÁó</b> ¸¸µé±â Ã¼Çè</h2><br>
-            <p>°ð ¹Ù·Î µû¿Â ½Å¼±ÇÑ ¾çÆÄ,<br>
-              ¸ö¿¡ ÁÁÀº ¾çÆÄ¸¦ ÀÌ¿ëÇÑ ¾çÆÄÁó ¸¸µé±â.<br>
-              Áñ°Å¿î ¾çÆÄÁó ¸¸µé±â Ã¼ÇèÀ» °¡Á·°ú ÇÔ²² Áñ°Ü º¸¼¼¿ä.</p><br>
+            <h4 class="ftco-sub-title" style="color: #000;">ì²´í—˜ ì¶”ì²œ</h4>
+            <h2>ë†ë¶€ì™€ í•¨ê»˜,<br> <b style="color:#FA742B;">ì–‘íŒŒì¦™</b> ë§Œë“¤ê¸° ì²´í—˜</h2><br>
+            <p>ê³§ ë°”ë¡œ ë”°ì˜¨ ì‹ ì„ í•œ ì–‘íŒŒ,<br>
+              ëª¸ì— ì¢‹ì€ ì–‘íŒŒë¥¼ ì´ìš©í•œ ì–‘íŒŒì¦™ ë§Œë“¤ê¸°.<br>
+              ì¦ê±°ìš´ ì–‘íŒŒì¦™ ë§Œë“¤ê¸° ì²´í—˜ì„ ê°€ì¡±ê³¼ í•¨ê»˜ ì¦ê²¨ ë³´ì„¸ìš”.</p><br>
             <p style="background-color: #FA742B;width: 200px;margin-left: 120px;">
-              <a href="#" class="btn btn-secondary btn-lg" style="color:ivory;">Ã¼Çè ¹®ÀÇ&¿¹¾à</a></p>
+              <a href="#" class="btn btn-secondary btn-lg" style="color:ivory;">ì²´í—˜ ë¬¸ì˜&ì˜ˆì•½</a></p>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-6 ftco-animate img" data-animate-effect="fadeInRight" style="margin-top: 200px;">
             <img src="images/muan.png" alt="Free Template by Free-Template.co" style="width: 450px;height: 350px;">
           </div>
-          <!-- 2¹øÂ° div -->
+          <!-- 2ë²ˆì§¸ div -->
             <div class="col-md-5 ftco-animate mb-5" style="margin-top: 100px;margin-right: 400px;">
               <img src="images/7.jpg" alt="Free Template by Free-Template.co" style="width: 500px;height: 350px;">
             </div>
             <div class="col-md-1" style="margin-right: 100px;"></div>
             <div class="col-md-6 ftco-animate img" data-animate-effect="fadeInRight" style="margin-top: 680px;text-align: center;margin-right: 100px;">
-              <h4 class="ftco-sub-title" style="color: #000;">³ó»ê¹° ÃßÃµ</h4>
-              <h2>Á÷°Å·¡¸¦ ÅëÇÑ ½Å¼±ÇÏ°í<br> <b style="color:#3CD500;">Àú·ÅÇÑ ³ó»ê¹°</b> ±¸¸Å </h2><br>
-              <p>³óÃÌÀ» Á÷Á¢ ¹æ¹®ÇÏ¿© °« ¼öÈ®ÇÑ ½Å¼±ÇÑ ³ó»ê¹°À»<br>
-                  À¯Åë¸¶Áø¾øÀÌ ¿ø°¡¿¡ Àú·ÅÇÏ°Ô ±¸¸ÅÇÏ¼¼¿ä.</p><br>
+              <h4 class="ftco-sub-title" style="color: #000;">ë†ì‚°ë¬¼ ì¶”ì²œ</h4>
+              <h2>ì§ê±°ëž˜ë¥¼ í†µí•œ ì‹ ì„ í•˜ê³ <br> <b style="color:#3CD500;">ì €ë ´í•œ ë†ì‚°ë¬¼</b> êµ¬ë§¤ </h2><br>
+              <p>ë†ì´Œì„ ì§ì ‘ ë°©ë¬¸í•˜ì—¬ ê°“ ìˆ˜í™•í•œ ì‹ ì„ í•œ ë†ì‚°ë¬¼ì„<br>
+                  ìœ í†µë§ˆì§„ì—†ì´ ì›ê°€ì— ì €ë ´í•˜ê²Œ êµ¬ë§¤í•˜ì„¸ìš”.</p><br>
               <p style="background-color: #3CD500;width: 170px;margin-left: 250px;">
-                <a href="#" class="btn btn-secondary btn-lg" style="color:ivory;">³ó»ê¹° º¸±â</a></p>
+                <a href="#" class="btn btn-secondary btn-lg" style="color:ivory;">ë†ì‚°ë¬¼ ë³´ê¸°</a></p>
             </div>
         </div>
       </div>
     </section>
     <!-- END section -->
-    <!-- AI ÃßÃµ ºÎºÐ END -->
+    <!-- AI ì¶”ì²œ ë¶€ë¶„ END -->
 
-    <!-- Ã¼ÇèÀ§Ä¡ Ã£±â begin  -->
+    <!-- ì²´í—˜ìœ„ì¹˜ ì°¾ê¸° begin  -->
     <section class="ftco-section" id="section-contact">
       <div class="container">
         <div class="row">
 
           <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">Ã¼ÇèÀ§Ä¡ Ã£±â</h2>
+            <h2 class="display-4">ì²´í—˜ìœ„ì¹˜ ì°¾ê¸°</h2>
             <div class="row justify-content-center">
               <!-- <div class="col-md-7">
                 <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -392,12 +417,12 @@
         </div>
       </div>
     </section>
-    <!-- Ã¼ÇèÀ§Ä¡ Ã£±â END  -->
+    <!-- ì²´í—˜ìœ„ì¹˜ ì°¾ê¸° END  -->
     
 
     <footer class="ftco-footer ftco-bg-dark ftco-section" style="padding-top: 0px;padding-bottom: 0px;">
       <div class="container">
-        <img src="images/logo3.JPG" alt="·Î°í" style="margin-left: 500px;width: 150px;height: 100px;margin-bottom: 10px;margin-top: 20px;">
+        <img src="images/logo3.JPG" alt="ë¡œê³ " style="margin-left: 500px;width: 150px;height: 100px;margin-bottom: 10px;margin-top: 20px;">
         <div class="row ftco-animate">
           <div class="col-md text-left">
             <p style="color:black; text-align: center;">&copy; Taste 2018. All Rights Reserved.  Made with <span class="icon-heart text-danger"></span>  
@@ -409,8 +434,8 @@
 
     
     
-<!-- ¸ð´ÞÃ¢ ¿øº» ¹× ¼öÁ¤º» -->
-   <!-- ¼öÁ¤ Modal -> »ç¾÷µî·Ï -->
+<!-- ëª¨ë‹¬ì°½ ì›ë³¸ ë° ìˆ˜ì •ë³¸ -->
+   <!-- ìˆ˜ì • Modal -> ì‚¬ì—…ë“±ë¡ -->
 			    <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
 			      <div class="modal-dialog modal-lg" role="document">
 			        <div class="modal-content">
@@ -420,69 +445,69 @@
 			                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			                  <small>CLOSE </small><span aria-hidden="true">&times;</span>
 			                </button>
-			                <h1 class="mb-4" style="font-size:35px;">»ç¾÷µî·Ï</h1>  
+			                <h1 class="mb-4" style="font-size:35px;">ì‚¬ì—…ë“±ë¡</h1>  
 			                <form action="#" method="post">
 			                  <table border="2px" float:left;" style="width: 720px;">
 				                <tr>
-				                    <th width="300" style="text-align: center; color:black;">¾ÆÀÌµð</th>
+				                    <th width="300" style="text-align: center; color:black;">ì•„ì´ë””</th>
 				                    <th width="800" height="70">
 				                        <input type="text" style="margin-left:10px;">
 				                    </th>
 				                </tr>
 				                <tr>
-				                    <th width="300" style="text-align: center;color:black;">±â¾÷¸í</th>
+				                    <th width="300" style="text-align: center;color:black;">ê¸°ì—…ëª…</th>
 				                    <th width="800" height="50" ><input type="text" style="margin-left:10px;"></th>
 				                </tr>
 				                <tr>
-				                    <th width="300" style="text-align: center;color:black;">ÀÌ¸§</th>
+				                    <th width="300" style="text-align: center;color:black;">ì´ë¦„</th>
 				                    <th width="800" height="50" ><input type="text" style="margin-left:10px;"></th>
 				                </tr>
 				                <tr>
-				                    <th width="300" style="text-align: center;color:black;">±â¾÷¼Ò°³</th>
+				                    <th width="300" style="text-align: center;color:black;">ê¸°ì—…ì†Œê°œ</th>
 				                    <th width="800" height="150">
 				                    <input type="text" style="margin-left:10px; width: 600px;">
-				                    <p style="margin-left:10px; margin-top:30px;">±â¾÷¿¡ ´ëÇÑ ¼³¸íÀ» Âª°Ô ¿ä¾àÇÏ¿© µî·ÏÇÕ´Ï´Ù.</p>
+				                    <p style="margin-left:10px; margin-top:30px;">ê¸°ì—…ì— ëŒ€í•œ ì„¤ëª…ì„ ì§§ê²Œ ìš”ì•½í•˜ì—¬ ë“±ë¡í•©ë‹ˆë‹¤.</p>
 				                    </th>
 				                </tr>
 				                <tr>
-				                    <th width="300" style="text-align: center;color:black;">±â¾÷»çÁøµî·Ï</th>
+				                    <th width="300" style="text-align: center;color:black;">ê¸°ì—…ì‚¬ì§„ë“±ë¡</th>
 				                    <th width="800" height="300">
 				                        <img src="https://e7.pngegg.com/pngimages/982/97/png-clipart-computer-icons-camera-iphone-graphy-camera-photography-camera-icon.png" alt="" style="height: 200px;width: 200px; margin-left:10px;">
-				                        <button style="margin-left:10px; margin-bottom: 30px; margin-top:30px; ">»çÁø µî·Ï</button><br>
+				                        <button style="margin-left:10px; margin-bottom: 30px; margin-top:30px; ">ì‚¬ì§„ ë“±ë¡</button><br>
 				                    </th>
 				                </tr>
 				                <tr>
-				                    <th width="300" style="text-align: center;color:black;">»óÇ°ÀÛ¹°</th>
+				                    <th width="300" style="text-align: center;color:black;">ìƒí’ˆìž‘ë¬¼</th>
 				                    <th width="800" height="50" ><input type="text" style="margin-left:10px;"></th>
 				                </tr>
 				                <tr>
-				                    <th width="300" style="text-align: center;color:black;">Ã¼Çè¸í</th>
+				                    <th width="300" style="text-align: center;color:black;">ì²´í—˜ëª…</th>
 				                    <th width="800" height="50" ><input type="text" style="margin-left:10px;"></th>
 				                </tr>
 				                <tr>
-				                    <th width="300" style="text-align: center;color:black;">Ã¼ÇèÁ¤º¸</th>
+				                    <th width="300" style="text-align: center;color:black;">ì²´í—˜ì •ë³´</th>
 				                    <th width="800" height="150">
 				                        <input type="text" style="margin-left:10px; width: 600px;">
-				                        <p style="margin-left:10px; margin-top:30px;">Ã¼ÇèÁ¤º¸¿¡ ´ëÇÑ ¼³¸íÀ» Âª°Ô ¿ä¾àÇÏ¿© µî·ÏÇÕ´Ï´Ù.</p>
+				                        <p style="margin-left:10px; margin-top:30px;">ì²´í—˜ì •ë³´ì— ëŒ€í•œ ì„¤ëª…ì„ ì§§ê²Œ ìš”ì•½í•˜ì—¬ ë“±ë¡í•©ë‹ˆë‹¤.</p>
 				                    </th>
 				                </tr>
 				                <tr>
-					                <th width="300" style="text-align: center;color:black;">¼ö¿ë°¡´ÉÀÎ¿ø</th>
+					                <th width="300" style="text-align: center;color:black;">ìˆ˜ìš©ê°€ëŠ¥ì¸ì›</th>
 						                <th width="800" height="150">
-						                <input type="number" placeholder="--¸í" min="0" max="50" step="1" style="margin-left:10px;height:40px; width:90px;"/>
+						                <input type="number" placeholder="--ëª…" min="0" max="50" step="1" style="margin-left:10px;height:40px; width:90px;"/>
 					                </th>
 				                </tr>
 				                <tr>
-				                    <th width="300" style="text-align: center;color:black;">À§Ä¡</th>
+				                    <th width="300" style="text-align: center;color:black;">ìœ„ì¹˜</th>
 				                    <th width="600" height="300">
-				                        <button style="margin-left:10px; margin-bottom: 30px;">¿ìÆí¹øÈ£ °Ë»ö</button><br>
+				                        <button style="margin-left:10px; margin-bottom: 30px;">ìš°íŽ¸ë²ˆí˜¸ ê²€ìƒ‰</button><br>
 				                        <input type="text" style="margin-left:10px; width:400px; height:50px;">
-				                        <input type="text" placeholder="»ó¼¼ÁÖ¼Ò¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä" style="width:400px; height:50px; margin-top:30px; margin-left:10px;"><br>
-				                        <input type="checkbox" style="margin-left:10px; margin-top: 30px;"> ±âº» À§Ä¡·Î ÀúÀå
+				                        <input type="text" placeholder="ìƒì„¸ì£¼ì†Œë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”" style="width:400px; height:50px; margin-top:30px; margin-left:10px;"><br>
+				                        <input type="checkbox" style="margin-left:10px; margin-top: 30px;"> ê¸°ë³¸ ìœ„ì¹˜ë¡œ ì €ìž¥
 				                    </th>
 				                </tr>
 				            </table>
-				            <br><button style="margin-left:300px;margin-bottom: 30px;background-color:#3CD500;color:#fff;width: 130px;height: 40px; border-radius:10px;">»ç¾÷µî·Ï¿Ï·á</button>
+				            <br><button style="margin-left:300px;margin-bottom: 30px;background-color:#3CD500;color:#fff;width: 130px;height: 40px; border-radius:10px;">ì‚¬ì—…ë“±ë¡ì™„ë£Œ</button>
 			                </form>
 			              </div>
 			            </div>
@@ -493,7 +518,7 @@
 			    </div>
 			    <!-- Modal END -->
 
-    <!--¼öÁ¤ Modal1 -> ³óÃÌ¿¹¾à ½Ã ¿¹¾à¿ëµµ -->
+    <!--ìˆ˜ì • Modal1 -> ë†ì´Œì˜ˆì•½ ì‹œ ì˜ˆì•½ìš©ë„ -->
     <div class="modal fade" id="reservationModal_1" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -504,7 +529,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
-                <h1 class="mb-4" style="font-size:35px;">³óÃÌÃ¼Çè ¿¹¾àÇÏ±â</h1>  
+                <h1 class="mb-4" style="font-size:35px;">ë†ì´Œì²´í—˜ ì˜ˆì•½í•˜ê¸°</h1>  
                 <form action="#" method="post">
                   <div class="row">
                     <div class="col-md-6 form-group">
@@ -572,7 +597,7 @@
     </div>
     <!-- END Modal1 -->
 
-    <!--¼öÁ¤ Modal2 -> ³óÃÌ¿¹¾à ½Ã °Ë»ö¿ëµµ -->
+    <!--ìˆ˜ì • Modal2 -> ë†ì´Œì˜ˆì•½ ì‹œ ê²€ìƒ‰ìš©ë„ -->
     <div class="modal fade" id="reservationModal_2" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -583,41 +608,41 @@
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
-                <h1 class="mb-4" style="font-size:35px;">³óÃÌÃ¼Çè °Ë»ö°á°ú</h1>  
+                <h1 class="mb-4" style="font-size:35px;">ë†ì´Œì²´í—˜ ê²€ìƒ‰ê²°ê³¼</h1>  
                 <div>
                   <table border="1" style="width: 450px;height: 300px; text-align:center;">
-                    <th style="text-align:center;">Áö¿ª</th>
-                    <th style="text-align:center;">Ã¼Çè¸í</th>
-                    <th style="text-align:center;">³¯Â¥ ¹× ½Ã°£</th>
-                    <th style="text-align:center;">ÀÎ¿ø</th>
-                    <th style="text-align:center;">¿¹¾àÇÏ±â</th>
+                    <th style="text-align:center;">ì§€ì—­</th>
+                    <th style="text-align:center;">ì²´í—˜ëª…</th>
+                    <th style="text-align:center;">ë‚ ì§œ ë° ì‹œê°„</th>
+                    <th style="text-align:center;">ì¸ì›</th>
+                    <th style="text-align:center;">ì˜ˆì•½í•˜ê¸°</th>
                     <tr>
                       <td>1</td>
                       <td>2</td>
                       <td>3</td>
                       <td>4</td>
-                      <td><button>¿¹¾à</button></td>
+                      <td><button>ì˜ˆì•½</button></td>
                     </tr>
                     <tr>
                       <td>1</td>
                       <td>2</td>
                       <td>3</td>
                       <td>4</td>
-                      <td><button>¿¹¾à</button></td>
+                      <td><button>ì˜ˆì•½</button></td>
                     </tr>
                     <tr>
                       <td>1</td>
                       <td>2</td>
                       <td>3</td>
                       <td>4</td>
-                      <td><button>¿¹¾à</button></td>
+                      <td><button>ì˜ˆì•½</button></td>
                     </tr>
                     <tr>
                       <td>1</td>
                       <td>2</td>
                       <td>3</td>
                       <td>4</td>
-                      <td><button>¿¹¾à</button></td>
+                      <td><button>ì˜ˆì•½</button></td>
                     </tr>
                   </table>
                 </div>
@@ -629,7 +654,7 @@
     </div>
     <!-- END Modal2 -->
 
-    <!--¼öÁ¤ Modal3 -> ¸¶ÀÌÆäÀÌÁö ¿ëµµ -->
+    <!--ìˆ˜ì • Modal3 -> ë§ˆì´íŽ˜ì´ì§€ ìš©ë„ -->
     <div class="modal fade" id="reservationModal_3" tabindex="-1" role="dialog" 
     aria-labelledby="reservationModalLabel" aria-hidden="true" >
       <div class="modal-dialog modal-lg" role="document">
@@ -641,17 +666,17 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
-                <h1 class="mb-4" style="font-size:35px;">¸¶ÀÌÆäÀÌÁö</h1>  
+                <h1 class="mb-4" style="font-size:35px;">ë§ˆì´íŽ˜ì´ì§€</h1>  
                 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" 
                 id="ftco-navbar" style="margin-top: 0px;padding-right: 10px;">
                   <div class="container">
                     <div class="collapse navbar-collapse" id="ftco-nav">
                       <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
                         <li class="nav-item ftco-animate">
-                          <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#" role="tab" aria-controls="pills-breakfast" aria-selected="true">»ç¾÷µî·Ï</a>
+                          <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#" role="tab" aria-controls="pills-breakfast" aria-selected="true">ì‚¬ì—…ë“±ë¡</a>
                         </li>
                         <li class="nav-item ftco-animate">
-                          <a class="nav-link" id="pills-lunch-tab" data-toggle="pill" href="#" role="tab" aria-controls="pills-lunch" aria-selected="false">¿¹¾à°ü¸®</a>
+                          <a class="nav-link" id="pills-lunch-tab" data-toggle="pill" href="#" role="tab" aria-controls="pills-lunch" aria-selected="false">ì˜ˆì•½ê´€ë¦¬</a>
                         </li>
                       </ul>
                     </div>
@@ -665,7 +690,7 @@
       </div>  
     <!-- END Modal3 -->
 
-    <!-- ¼öÁ¤ Modal4 -> ¸®ºäÆäÀÌÁö ¿ëµµ -->
+    <!-- ìˆ˜ì • Modal4 -> ë¦¬ë·°íŽ˜ì´ì§€ ìš©ë„ -->
     <div class="modal fade" id="reservationModal_4" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -676,17 +701,17 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <small>CLOSE </small><span aria-hidden="true">&times;</span>
                 </button>
-                <h1 class="mb-4" style="font-size:35px;">¸®ºä ÀÛ¼ºÇÏ±â</h1><hr>
+                <h1 class="mb-4" style="font-size:35px;">ë¦¬ë·° ìž‘ì„±í•˜ê¸°</h1><hr>
                 <form action="#" method="post">
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <label for="m_fname">Á¦¸ñ</label>
+                      <label for="m_fname">ì œëª©</label>
                       <input type="text" class="form-control" id="m_fname" style="width: 450px;">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group" style="height: 300px;">
-                      <label for="m_message">³»¿ë</label>
+                      <label for="m_message">ë‚´ìš©</label>
                       <textarea class="form-control" id="m_message" cols="30" rows="7" 
                       style="margin-top:0px; margin-bottom:0px; width:450px; height: 400px;"></textarea>
                     </div>
@@ -694,7 +719,7 @@
                   
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="submit" class="btn btn-primary btn-lg btn-block" value="¸®ºä µî·ÏÇÏ±â" 
+                      <input type="submit" class="btn btn-primary btn-lg btn-block" value="ë¦¬ë·° ë“±ë¡í•˜ê¸°" 
                       style="margin-left: 280px;margin-top:50px;padding-right: 0px;width: 180px;">
                     </div>
                   </div>
@@ -732,5 +757,6 @@
     <script src="js/google-map.js"></script>
 
     <script src="js/main.js"></script>
+
 </body>
 </html>
