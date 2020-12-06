@@ -31,6 +31,18 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 <title>Insert title here</title>
+
+<script type="text/javascript">
+    function div_event() {
+    	var con = document.getElementById('show_table').style.display;
+       if(con=="none"){
+          document.getElementById('show_table').style.display ='block';
+       }else{
+          document.getElementById('show_table').style.display=='none';
+       }
+    }
+    </script>
+
 </head>
 <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
 
@@ -265,11 +277,11 @@
                         border-left-width: 0px;
                         border-right-width: 2px;
                         border-bottom-width: 2px;
-                        " onclick="doDisplay()"> 검색하기</button>
+                        " onclick="div_event()"> 검색하기</button>
                       </div>
                     </div>
                     <!-- 검색결과 -->
-                    <div id="show_table" style="width: 1000px; height: 300px;"> 
+                    <div id="show_table" style="width: 1000px; height: 300px; display:none;"> 
                      
                       <table border="1" style="width: 800px;height: 300px; text-align:center;">
                         <th style="text-align:center;color:black;">지역</th>
@@ -757,16 +769,6 @@
     <script src="js/google-map.js"></script>
 
     <script src="js/main.js"></script>
-    <script type="text/javascript">
-    function doDisplay() {
-    	var con = document.getElementById("show_table");
-    	if(con.style.display=='none') {
-    		con.style.display = 'block';
-    	}else{
-    		con.stlye.display = 'none';
-    	}
-    }
-    </script>
 
 </body>
 </html>
