@@ -40,7 +40,7 @@
             <span></span>
           </div>
         <!-- hamburger menu end -->
-        <a class="navbar-brand" href="index.html" style="margin-left: 320px; font-size:30px; color:black;">오늘의 체험</a>
+        <a class="navbar-brand" href="index.jsp" style="margin-left: 320px; font-size:30px; color:black;">오늘의 체험</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" 
         aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
@@ -133,7 +133,7 @@
                 <div class="row">
                   <div class="col-md-6 ftco-animate" style="padding-left: 200px;">
                      <!-- 체험 검색부분 -->
-                    <div style="width:800px;background-color:#eff6e0;">
+                    <div style="width:700px;background-color:#eff6e0;margin-left: 30px;">
                       <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
                         <li class="nav-item ftco-animate">
                           <div class="media menu-item">
@@ -141,9 +141,15 @@
                               <h5 class="mt-0">김장 체험</h5><hr>
                                <p style="color:black;">김장준비 해남 절임배추로 간편하게 하세요!<br> 맛있기로 소문난 해남 절임배추 물 맑고 공기 좋은 청정지역 땅끝 해남에서<br> 자라 속이 꽉 차고 단 맛 나는 해남 절임배추로 김장 준비 손 쉽게 해보세요!</p>
                                <h6 style="font-size: 15px; color:black;">수용인원 최대 20명</h6>
-                               <h6 style="font-size: 15px; color:black;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6>
-                               <button style="margin-left: 500px;margin-bottom: 30px;background-color:#fff;color:black;
-                               width: 130px;height: 40px;border-radius:10px;">예약하기</button>
+                               <h6 style="font-size: 15px; color:black;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6><br>
+                          	<div>
+                          	   <b>예약하기</b><hr>
+                          	   <p>날짜 <input type="date" name="date"><br></p>
+                               <p>인원 <input type="number" placeholder="--명" min="0" max="50" step="1" style="width: 58px;"></p>
+                               <input type="button" value="예약하기" style="margin-left: 450px;margin-bottom: 0px;
+                               background-color:#fff;color:black;width: 130px;
+                               height: 40px;border-radius:10px;"/>
+                          	</div>
                           </div>
                         </li>
                         <li class="nav-item ftco-animate">
@@ -152,10 +158,16 @@
                               <h5 class="mt-0">쑥캐기 체험</h5><hr>
                                 <p style="color:black;">어릴때 할머니가 해주셨던 그 쑥 국! 이젠 저희가 해드립니다.<br> 남녀노소 구분 없이 할 수 있는 쑥 캐기 체험 지금 바로 떠나볼까요?</p>
                                 <h6 style="font-size: 15px; color:black;">수용인원 최대 20명</h6>
-                                <h6 style="font-size: 15px; color:black;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6>
-                                <button style="margin-left: 500px;margin-bottom: 30px; background-color:#fff;color:black;
-                                width: 130px;height: 40px;border-radius:10px;">예약하기</button>
-                            </div>
+                                <h6 style="font-size: 15px; color:black;">위치: 전남 해남군 북평면 오산길 139-12 (오산리, 해남수산)</h6><br>
+                            <div>
+                          	   <b>예약하기</b><hr>
+                          	   <p>날짜 <input type="date" name="date"><br></p>
+                               <p>인원 <input type="number" placeholder="--명" min="0" max="50" step="1" style="width: 58px;"></p>
+                               <input type="button" value="예약하기" style="margin-left: 450px;margin-bottom: 0px;
+                               background-color:#fff;color:black;width: 130px;
+                               height: 40px;border-radius:10px;"/>
+                          	</div>
+                          	</div>
                           </div>
                         </li>
                       </ul>
@@ -168,8 +180,8 @@
               <!-- 예약확인 -->
               <div class="tab-pane fade" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab">
                 <div class="row">
-                  <div>
-                    <p style="text-align: center;margin-left: 150px;color:black;">다른 이용자들의 실제 리뷰를 확인하세요.</p>
+                  <div >
+                    <p style="text-align: center;margin-left: 17-0;background-color:#eff6e0;color:black;width: 800px;margin-left: 190px;">다른 이용자들의 실제 리뷰를 확인하세요.</p>
                     <table border="1" style="width: 800px;height: 300px;text-align:center;margin-left: 190px;">
                         <th style="text-align:center;color:black;">리뷰번호</th>
                         <th style="text-align:center;color:black;">리뷰제목</th>
@@ -201,10 +213,11 @@
                         </tr>
                       </table>
                	 </div><hr>
-                <div style="width: 700px;height: 200px;margin-top: 50px;margin-left: 240px;background-color:#eff6e0;">
-                 <p style="text-align: center;margin-top: 50px; color:black;">실제 이용 후기를 다른 이용자들과 함께 공유하세요.</p>
-                 <button type="button" data-toggle="modal" data-target="#reservationModal_4" style="margin-left: 300px;margin-bottom: 30px;background-color:#fff;color:black;width: 130px;height: 40px;
-                 border-radius:10px;margin-top: 10px;">리뷰작성</button>
+                <div style="width: 700px;height: 200px;margin-top: 50px;margin-left: 240px;">
+                 <p style="text-align: center;margin-top: 50px; color:black;background-color:#eff6e0;">실제 이용 후기를 다른 이용자들과 함께 공유하세요.</p>
+                 <button type="button" data-toggle="modal" data-target="#reservationModal_4" style="
+                 margin-left: 300px;margin-bottom: 30px;background-color:#3CD500;color:#fff;width: 130px;
+                 height: 40px;border-radius:10px;margin-top: 10px;border-top-width: 0px;border-left-width: 0px;">리뷰작성</button>
                  <!-- 해결할 것: 리뷰작성 모달 창 연결하기!!! -->
              	</div>
               </div>

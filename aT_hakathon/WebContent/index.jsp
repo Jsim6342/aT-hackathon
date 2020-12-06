@@ -43,7 +43,7 @@
             <span></span>
           </div>
         <!-- hamburger menu end -->
-        <a class="navbar-brand" href="index.html" style="margin-left: 320px; font-size:30px;">오늘의 체험</a>
+        <a class="navbar-brand" href="index.jsp" style="margin-left: 320px; font-size:30px;">오늘의 체험</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" 
         aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
@@ -192,7 +192,7 @@
                      <!-- 체험 검색부분 -->
                     <div style="width:800px;">
                       <ul class="nav ftco-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
-                        <li class="nav-item ftco-animate">a
+                        <li class="nav-item ftco-animate">
                           <div class="media menu-item">
                             <div class="media-body">
                               <h5 class="mt-0">지역검색</h5>
