@@ -46,7 +46,7 @@
 </head>
 <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
 
-    <% //스크립틀릿
+ <% //스크립틀릿
  
  	//session값 id 가져오기
 	String id = (String)session.getAttribute("id");

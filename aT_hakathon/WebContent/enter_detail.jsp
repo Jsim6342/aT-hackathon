@@ -1,3 +1,5 @@
+<%@page import="com.DTO.MemberDTO"%>
+<%@page import="com.DAO.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -28,7 +30,13 @@
 	<title>기업상세페이지</title>
 </head>
 <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
-    
+     <% //스크립틀릿
+ 
+ 	//session값 id 가져오기
+	String id = (String)session.getAttribute("id");
+	System.out.println("현재 접속한 사람의 id: " + id);
+	
+ %>
     <!-- navigation bar begin -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="margin-top: 0px;">
       <div class="container" style="margin-right: 0px;">
@@ -45,16 +53,29 @@
         aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
+        <%
+        
+        MemberDAO mem_dao = new MemberDAO();
+        MemberDTO member = new MemberDTO();
+        member = mem_dao.member_select(id);
+        
+        %>
         <div class="collapse navbar-collapse" id="ftco-nav" style="float: left;">
           <ul class="navbar-nav ml-auto">
+          <% if(id!=null) {%>
+          <%  if(member.getClassify().equals("company")) { %>
           <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#reservationModal" class="nav-link" style="color:black;">사업등록</a></li>
+              data-toggle="modal" data-target="#reservationModal" class="nav-link">사업등록</a></li>
+          <% } %>
+          <% } %>      
+          <% if(id==null) { %>
+            <li class="nav-item"><a href="login.jsp" target="_blank" class="nav-link">로그인</a></li>
+          <% }else { %>
             <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#" class="nav-link" style="color:black;">정보수정</a></li>
-            <li class="nav-item"><a href="https://free-template.co/" target="_blank" 
-              data-toggle="modal" data-target="#reservationModal_3" class="nav-link" style="color:black;">마이페이지</a></li>
-            <li class="nav-item"><a href="login.jsp" target="_blank" class="nav-link" style="color:black;">로그인</a></li>
-            <li class="nav-item"><a href="register.jsp" target="_blank" class="nav-link" style="color:black;">회원가입</a></li>
+              data-toggle="modal" data-target="#reservationModal_3" class="nav-link">마이페이지</a></li>
+            <li class="nav-item"><a href="LogoutService" target="_blank" class="nav-link">로그아웃</a></li>
+          <% } %>
+            <li class="nav-item"><a href="register.jsp" target="_blank" class="nav-link">회원가입</a></li>
           </ul>
         </div>
       </div>
