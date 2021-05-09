@@ -49,19 +49,27 @@
 ### 4.2. 빅데이터 모델링 과정
 __1. 데이터 확보__  
 공공기관에서 제공하는 작물의 일일 수급상황 데이터를 확보했습니다.
+
 </br>
+
 __2. 날짜 추출__  
 현재 날짜에서 필요한 데이터 조회일자를 검색하기 위해 날짜를 추출했습니다.
 > ![image](https://user-images.githubusercontent.com/70616657/117564675-300d2080-b0e8-11eb-8211-208db9a3c5ac.png)
+
 </br>
+
 __3. 데이터 추출__  
 추출한 날짜에 맞는 중분류명과 가장 높거나 낮은 주의단계 코드를 추출했습니다.
 > ![image](https://user-images.githubusercontent.com/70616657/117564699-4c10c200-b0e8-11eb-977f-bd90ebd49da4.png)
+
 </br>
+
 __4. 데이터 전송__  
 플라스크 서버를 이용하여 추출된 데이터를 톰캣 서버로 전송합니다.
 > ![image](https://user-images.githubusercontent.com/70616657/117564739-7febe780-b0e8-11eb-947b-5c7f86eacfd1.png)
+
 </br>
+
 __5. 데이터 전송__  
 전송 받은데이터를 바탕으로 기업 DB에서 적합한 기업을 시각화 하여 추천해줍니다.
 ![image](https://user-images.githubusercontent.com/70616657/117564749-89754f80-b0e8-11eb-947d-bdc51359f127.png)
