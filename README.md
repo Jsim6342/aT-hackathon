@@ -28,7 +28,6 @@
   - Java 8
   - Servlet
   - JSP
-  - SQL
   - Python
 #### `Front-end`
   - HTML
